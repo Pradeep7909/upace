@@ -7,23 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3024F0684D85B4C69EE49ADD /* Pods_upace_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA69D404241D6D0D3BFA7D06 /* Pods_upace_ios.framework */; };
+		AE5636B32B9E26FE001454C4 /* SingleEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */; };
+		AE5636B52B9F10B6001454C4 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */; };
+		AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */; };
+		AE5636BA2B9F11CE001454C4 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B92B9F11CE001454C4 /* OverviewViewController.swift */; };
+		AE5636BC2B9F11DB001454C4 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636BB2B9F11DB001454C4 /* FAQViewController.swift */; };
+		AE68A94A2B9A2ACB00AF97C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9492B9A2ACB00AF97C4 /* MainViewController.swift */; };
+		AE68A94C2B9A2B4600AF97C4 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94B2B9A2B4600AF97C4 /* FeaturesViewController.swift */; };
+		AE68A94E2B9A2B6600AF97C4 /* UniversitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94D2B9A2B6600AF97C4 /* UniversitiesViewController.swift */; };
+		AE68A9502B9A2B7A00AF97C4 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94F2B9A2B7A00AF97C4 /* CoursesViewController.swift */; };
+		AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9512B9A2B8D00AF97C4 /* ProfileViewController.swift */; };
+		AE68A9542B9A2CE900AF97C4 /* TabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9532B9A2CE900AF97C4 /* TabPageViewController.swift */; };
+		AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */; };
+		AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */; };
+		AEC2D0512B98F67600B2CEA0 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */; };
+		AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241B2B999E31007B0D37 /* SessionManager.swift */; };
+		AEE5241E2B999EC5007B0D37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241D2B999EC5007B0D37 /* Model.swift */; };
+		AEE524202B999F23007B0D37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */; };
+		AEE524222B99C013007B0D37 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE524212B99C013007B0D37 /* Singleton.swift */; };
+		AEE524242B99C528007B0D37 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE524232B99C528007B0D37 /* HomeViewController.swift */; };
+		AEE5F0AD2B9B3905003E5A64 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5F0AC2B9B3905003E5A64 /* InitialViewController.swift */; };
 		AEE869072B98526D00549A94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869062B98526D00549A94 /* AppDelegate.swift */; };
 		AEE869092B98526D00549A94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869082B98526D00549A94 /* SceneDelegate.swift */; };
-		AEE8690B2B98526D00549A94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE8690A2B98526D00549A94 /* ViewController.swift */; };
 		AEE8690E2B98526D00549A94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE8690C2B98526D00549A94 /* Main.storyboard */; };
 		AEE869102B98526F00549A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEE8690F2B98526F00549A94 /* Assets.xcassets */; };
 		AEE869132B98526F00549A94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE869112B98526F00549A94 /* LaunchScreen.storyboard */; };
+		AEE8691E2B98647B00549A94 /* Nunito-Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AEE8691D2B98647B00549A94 /* Nunito-Font.ttf */; };
+		AEE869212B98676A00549A94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869202B98676A00549A94 /* Constants.swift */; };
+		AEE869242B98743300549A94 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869232B98743300549A94 /* Designable.swift */; };
+		AEE869262B987B5800549A94 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869252B987B5800549A94 /* LoginViewController.swift */; };
+		AEE869282B98935200549A94 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869272B98935200549A94 /* Functions.swift */; };
+		AEE8692D2B989AA000549A94 /* CommonTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE8692C2B989AA000549A94 /* CommonTopView.swift */; };
+		AEE8692F2B989AB200549A94 /* CommonTopView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEE8692E2B989AB200549A94 /* CommonTopView.xib */; };
+		AEF095472B98AB15000B53BE /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF095462B98AB15000B53BE /* SignupViewController.swift */; };
+		AEF095492B98B1D0000B53BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF095482B98B1D0000B53BE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B2B33FA218BFF755642A923 /* Pods-upace-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upace-ios.debug.xcconfig"; path = "Target Support Files/Pods-upace-ios/Pods-upace-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventViewController.swift; sourceTree = "<group>"; };
+		AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
+		AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothListViewController.swift; sourceTree = "<group>"; };
+		AE5636B92B9F11CE001454C4 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
+		AE5636BB2B9F11DB001454C4 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		AE68A9492B9A2ACB00AF97C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AE68A94B2B9A2B4600AF97C4 /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
+		AE68A94D2B9A2B6600AF97C4 /* UniversitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversitiesViewController.swift; sourceTree = "<group>"; };
+		AE68A94F2B9A2B7A00AF97C4 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		AE68A9512B9A2B8D00AF97C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		AE68A9532B9A2CE900AF97C4 /* TabPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPageViewController.swift; sourceTree = "<group>"; };
+		AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfieldView.swift; sourceTree = "<group>"; };
+		AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextfieldView.xib; sourceTree = "<group>"; };
+		AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		AEE5241B2B999E31007B0D37 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		AEE5241D2B999EC5007B0D37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		AEE524212B99C013007B0D37 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		AEE524232B99C528007B0D37 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		AEE5F0AC2B9B3905003E5A64 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		AEE869032B98526D00549A94 /* upace-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "upace-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE869062B98526D00549A94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEE869082B98526D00549A94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AEE8690A2B98526D00549A94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AEE8690D2B98526D00549A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEE8690F2B98526F00549A94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEE869122B98526F00549A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEE869142B98526F00549A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEE8691D2B98647B00549A94 /* Nunito-Font.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Font.ttf"; sourceTree = "<group>"; };
+		AEE869202B98676A00549A94 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AEE869232B98743300549A94 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
+		AEE869252B987B5800549A94 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AEE869272B98935200549A94 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		AEE8692C2B989AA000549A94 /* CommonTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTopView.swift; sourceTree = "<group>"; };
+		AEE8692E2B989AB200549A94 /* CommonTopView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonTopView.xib; sourceTree = "<group>"; };
+		AEF095462B98AB15000B53BE /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		AEF095482B98B1D0000B53BE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E7F5CC5EF377C9EB77DCBD2A /* Pods-upace-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upace-ios.release.xcconfig"; path = "Target Support Files/Pods-upace-ios/Pods-upace-ios.release.xcconfig"; sourceTree = "<group>"; };
+		EA69D404241D6D0D3BFA7D06 /* Pods_upace_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_upace_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +91,73 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3024F0684D85B4C69EE49ADD /* Pods_upace_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE5636B12B9E26CA001454C4 /* Event Screen */ = {
+			isa = PBXGroup;
+			children = (
+				AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */,
+				AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */,
+				AE5636B62B9F119C001454C4 /* EventPages */,
+			);
+			path = "Event Screen";
+			sourceTree = "<group>";
+		};
+		AE5636B62B9F119C001454C4 /* EventPages */ = {
+			isa = PBXGroup;
+			children = (
+				AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */,
+				AE5636B92B9F11CE001454C4 /* OverviewViewController.swift */,
+				AE5636BB2B9F11DB001454C4 /* FAQViewController.swift */,
+			);
+			path = EventPages;
+			sourceTree = "<group>";
+		};
+		AE68A9482B9A2A8A00AF97C4 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				AE68A9492B9A2ACB00AF97C4 /* MainViewController.swift */,
+				AE68A9532B9A2CE900AF97C4 /* TabPageViewController.swift */,
+				AEE524232B99C528007B0D37 /* HomeViewController.swift */,
+				AE68A94B2B9A2B4600AF97C4 /* FeaturesViewController.swift */,
+				AE68A94D2B9A2B6600AF97C4 /* UniversitiesViewController.swift */,
+				AE68A94F2B9A2B7A00AF97C4 /* CoursesViewController.swift */,
+				AE68A9512B9A2B8D00AF97C4 /* ProfileViewController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		AEB723152B9C274B0008A80C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				AEE869062B98526D00549A94 /* AppDelegate.swift */,
+				AEE869082B98526D00549A94 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		AEB723162B9C27B00008A80C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AEE8690C2B98526D00549A94 /* Main.storyboard */,
+				AEE869112B98526F00549A94 /* LaunchScreen.storyboard */,
+				AEE869292B989A3C00549A94 /* XibView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		AEE868FA2B98526D00549A94 = {
 			isa = PBXGroup;
 			children = (
 				AEE869052B98526D00549A94 /* upace-ios */,
 				AEE869042B98526D00549A94 /* Products */,
+				D37F1C340A11E5D76102DB0D /* Pods */,
+				B3A0007992E53BD3BAA33753 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +172,95 @@
 		AEE869052B98526D00549A94 /* upace-ios */ = {
 			isa = PBXGroup;
 			children = (
-				AEE869062B98526D00549A94 /* AppDelegate.swift */,
-				AEE869082B98526D00549A94 /* SceneDelegate.swift */,
-				AEE8690A2B98526D00549A94 /* ViewController.swift */,
-				AEE8690C2B98526D00549A94 /* Main.storyboard */,
+				AEB723152B9C274B0008A80C /* AppDelegate */,
+				AEE8691B2B98546A00549A94 /* Model */,
+				AEE8691A2B98545F00549A94 /* Controller */,
+				AEB723162B9C27B00008A80C /* View */,
+				AEE8691C2B9857C600549A94 /* Fonts */,
 				AEE8690F2B98526F00549A94 /* Assets.xcassets */,
-				AEE869112B98526F00549A94 /* LaunchScreen.storyboard */,
 				AEE869142B98526F00549A94 /* Info.plist */,
 			);
 			path = "upace-ios";
+			sourceTree = "<group>";
+		};
+		AEE8691A2B98545F00549A94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AEE5F0AC2B9B3905003E5A64 /* InitialViewController.swift */,
+				AEE869222B98732300549A94 /* Registration */,
+				AE68A9482B9A2A8A00AF97C4 /* Tabbar */,
+				AE5636B12B9E26CA001454C4 /* Event Screen */,
+				AEE8691F2B98674A00549A94 /* Helper Files */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AEE8691B2B98546A00549A94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEE5241D2B999EC5007B0D37 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEE8691C2B9857C600549A94 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AEE8691D2B98647B00549A94 /* Nunito-Font.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AEE8691F2B98674A00549A94 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEE869202B98676A00549A94 /* Constants.swift */,
+				AEE869232B98743300549A94 /* Designable.swift */,
+				AEE869272B98935200549A94 /* Functions.swift */,
+				AEF095482B98B1D0000B53BE /* Extensions.swift */,
+				AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */,
+				AEE5241B2B999E31007B0D37 /* SessionManager.swift */,
+				AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */,
+				AEE524212B99C013007B0D37 /* Singleton.swift */,
+			);
+			path = "Helper Files";
+			sourceTree = "<group>";
+		};
+		AEE869222B98732300549A94 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				AEE869252B987B5800549A94 /* LoginViewController.swift */,
+				AEF095462B98AB15000B53BE /* SignupViewController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		AEE869292B989A3C00549A94 /* XibView */ = {
+			isa = PBXGroup;
+			children = (
+				AEE8692E2B989AB200549A94 /* CommonTopView.xib */,
+				AEE8692C2B989AA000549A94 /* CommonTopView.swift */,
+				AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */,
+				AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */,
+			);
+			path = XibView;
+			sourceTree = "<group>";
+		};
+		B3A0007992E53BD3BAA33753 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA69D404241D6D0D3BFA7D06 /* Pods_upace_ios.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D37F1C340A11E5D76102DB0D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B2B33FA218BFF755642A923 /* Pods-upace-ios.debug.xcconfig */,
+				E7F5CC5EF377C9EB77DCBD2A /* Pods-upace-ios.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AEE869172B98526F00549A94 /* Build configuration list for PBXNativeTarget "upace-ios" */;
 			buildPhases = (
+				DFBD3EE0AF66E2E451644D60 /* [CP] Check Pods Manifest.lock */,
 				AEE868FF2B98526D00549A94 /* Sources */,
 				AEE869002B98526D00549A94 /* Frameworks */,
 				AEE869012B98526D00549A94 /* Resources */,
+				0B7D101490982EC808D0EEDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,22 +323,92 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE8691E2B98647B00549A94 /* Nunito-Font.ttf in Resources */,
+				AEE8692F2B989AB200549A94 /* CommonTopView.xib in Resources */,
 				AEE869132B98526F00549A94 /* LaunchScreen.storyboard in Resources */,
 				AEE869102B98526F00549A94 /* Assets.xcassets in Resources */,
+				AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */,
 				AEE8690E2B98526D00549A94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B7D101490982EC808D0EEDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-upace-ios/Pods-upace-ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-upace-ios/Pods-upace-ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-upace-ios/Pods-upace-ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFBD3EE0AF66E2E451644D60 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-upace-ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AEE868FF2B98526D00549A94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEE8690B2B98526D00549A94 /* ViewController.swift in Sources */,
+				AEE524202B999F23007B0D37 /* ActivityIndicator.swift in Sources */,
+				AEF095472B98AB15000B53BE /* SignupViewController.swift in Sources */,
+				AE5636BA2B9F11CE001454C4 /* OverviewViewController.swift in Sources */,
+				AEE524242B99C528007B0D37 /* HomeViewController.swift in Sources */,
+				AE68A94C2B9A2B4600AF97C4 /* FeaturesViewController.swift in Sources */,
+				AEE869262B987B5800549A94 /* LoginViewController.swift in Sources */,
+				AEE869242B98743300549A94 /* Designable.swift in Sources */,
+				AE68A9542B9A2CE900AF97C4 /* TabPageViewController.swift in Sources */,
+				AEE869282B98935200549A94 /* Functions.swift in Sources */,
+				AE68A94A2B9A2ACB00AF97C4 /* MainViewController.swift in Sources */,
+				AE68A9502B9A2B7A00AF97C4 /* CoursesViewController.swift in Sources */,
+				AE68A94E2B9A2B6600AF97C4 /* UniversitiesViewController.swift in Sources */,
+				AEC2D0512B98F67600B2CEA0 /* ToastManager.swift in Sources */,
+				AEE5F0AD2B9B3905003E5A64 /* InitialViewController.swift in Sources */,
+				AE5636B32B9E26FE001454C4 /* SingleEventViewController.swift in Sources */,
+				AEE5241E2B999EC5007B0D37 /* Model.swift in Sources */,
+				AEF095492B98B1D0000B53BE /* Extensions.swift in Sources */,
+				AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */,
 				AEE869072B98526D00549A94 /* AppDelegate.swift in Sources */,
+				AE5636B52B9F10B6001454C4 /* EventPageViewController.swift in Sources */,
+				AEE8692D2B989AA000549A94 /* CommonTopView.swift in Sources */,
 				AEE869092B98526D00549A94 /* SceneDelegate.swift in Sources */,
+				AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */,
+				AEE524222B99C013007B0D37 /* Singleton.swift in Sources */,
+				AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */,
+				AE5636BC2B9F11DB001454C4 /* FAQViewController.swift in Sources */,
+				AEE869212B98676A00549A94 /* Constants.swift in Sources */,
+				AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +486,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +543,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,12 +555,14 @@
 		};
 		AEE869182B98526F00549A94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B2B33FA218BFF755642A923 /* Pods-upace-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V6W7VB43FV;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "upace-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,12 +585,14 @@
 		};
 		AEE869192B98526F00549A94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F5CC5EF377C9EB77DCBD2A /* Pods-upace-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V6W7VB43FV;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "upace-ios/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
