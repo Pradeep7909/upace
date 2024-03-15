@@ -1,22 +1,34 @@
 PODS:
   - Alamofire (5.9.0)
+  - AmazonChimeSDK-Bitcode (0.24.1):
+    - AmazonChimeSDKMedia-Bitcode (= 0.19.1)
+  - AmazonChimeSDKMedia-Bitcode (0.19.1)
+  - AWSCore (2.34.0)
   - SDWebImage (5.19.0):
     - SDWebImage/Core (= 5.19.0)
   - SDWebImage/Core (5.19.0)
 
 DEPENDENCIES:
   - Alamofire
+  - AmazonChimeSDK-Bitcode
+  - AWSCore
   - SDWebImage
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AmazonChimeSDK-Bitcode
+    - AmazonChimeSDKMedia-Bitcode
+    - AWSCore
     - SDWebImage
 
 SPEC CHECKSUMS:
   Alamofire: 02b772c9910e8eba1a079227c32fbd9e46c90a24
+  AmazonChimeSDK-Bitcode: 5868c37692f932a253948e7b2f1c8aba49558eb2
+  AmazonChimeSDKMedia-Bitcode: 5ceba7d0cbe3ed6f4518988cec70110a0e67fea9
+  AWSCore: 35d036e9519377a20fd2783874b5ff44268608bb
   SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
 
-PODFILE CHECKSUM: 77a87d1e77d5a6004e21b521e9b84f300b133ec2
+PODFILE CHECKSUM: a3f34e6d99d607a5f68a1747217c4295c4206710
 
 COCOAPODS: 1.15.0

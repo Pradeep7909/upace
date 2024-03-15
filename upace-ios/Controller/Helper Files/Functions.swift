@@ -16,11 +16,11 @@ func formatDate(_ dateString: String) -> String? {
     let dateFormatter = DateFormatter()
     dateFormatter.locale = Locale(identifier: "en_US_POSIX")
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-
+    
     guard let date = dateFormatter.date(from: dateString) else {
         return nil // Return nil if the input date string is invalid
     }
-
+    
     dateFormatter.dateFormat = "MMMM dd, yyyy"
     return dateFormatter.string(from: date)
 }
@@ -55,3 +55,48 @@ func calculateTableViewHeight(for tableView: UITableView) -> CGFloat {
     
     return totalHeight
 }
+
+
+
+func parse(data : String) -> MediaPlacementResponse?{
+    
+    // Your mediaPlacement string
+    let mediaPlacementString = """
+    \(data)
+"""
+    
+    var convertData : MediaPlacementResponse?
+    
+    // Unescape the string
+    let unescapedString = mediaPlacementString
+        .replacingOccurrences(of: #"\""#, with: "\"")
+        .replacingOccurrences(of: "\\\"", with: "\"")
+    
+    // Convert the unescaped string to Data
+    if let mediaPlacementData = unescapedString.data(using: .utf8) {
+        do {
+            // Decode the JSON data into a dictionary
+            if let dictionary = try JSONSerialization.jsonObject(with: mediaPlacementData, options: []) as? [String: String] {
+                // Access the values
+                let audioHostUrl = dictionary["AudioHostUrl"] ?? ""
+                let audioFallbackUrl = dictionary["AudioFallbackUrl"] ?? ""
+                let signalingUrl = dictionary["SignalingUrl"] ?? ""
+                let turnControlUrl = dictionary["TurnControlUrl"] ?? ""
+                let screenDataUrl = dictionary["ScreenDataUrl"] ?? ""
+                let screenViewingUrl = dictionary["ScreenViewingUrl"] ?? ""
+                let screenSharingUrl = dictionary["ScreenSharingUrl"] ?? ""
+                let eventIngestionUrl = dictionary["EventIngestionUrl"] ?? ""
+                
+                convertData = MediaPlacementResponse(audioHostUrl: audioHostUrl, audioFallbackUrl: audioFallbackUrl, signalingUrl: signalingUrl, turnControlUrl: turnControlUrl, screenDataUrl: screenDataUrl, screenViewingUrl: screenViewingUrl, screenSharingUrl: screenSharingUrl, eventIngestionUrl: eventIngestionUrl)
+                
+                
+            }
+        } catch {
+            print("Error decoding JSON: \(error)")
+        }
+    }
+    
+    return convertData
+    
+}
+

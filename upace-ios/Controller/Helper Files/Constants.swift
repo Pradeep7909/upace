@@ -26,9 +26,7 @@ let U_EVENT = "v-fair-event"
 let U_LATEST = "?type=latest"
 let U_EMAIL_SUBSCRIBE = "cms/email-subscribe"
 let U_BOOTH_UNIVERSITIES = "/universities?event_id="
-
-
-
+let U_MEETING = "v-fair/meeting"
 
 
 //USER DEFAULTS

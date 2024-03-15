@@ -85,3 +85,46 @@ struct FAQ : Codable{
     let question : String
     let answer : String
 }
+
+
+
+struct JoinInfoResponse: Codable {
+    let status: Int?
+    let data: JoinInfoData?
+    let message: String?
+    let action: String?
+    
+}
+
+struct JoinInfoData: Codable {
+    let JoinInfo: JoinInfo?
+}
+
+struct JoinInfo: Codable {
+    let Meeting: MeetingData?
+    let Attendee: AttendeeData?
+}
+
+struct MeetingData: Codable {
+    let MeetingId: String
+    let ExternalMeetingId: String
+    let MediaPlacement: String
+    let MediaRegion: String
+}
+
+struct AttendeeData: Codable {
+    let ExternalUserId: String
+    let AttendeeId: String
+    let JoinToken: String
+}
+
+struct MediaPlacementResponse: Codable {
+    let audioHostUrl: String
+    let audioFallbackUrl: String
+    let signalingUrl: String
+    let turnControlUrl: String
+    let screenDataUrl: String
+    let screenViewingUrl: String
+    let screenSharingUrl: String
+    let eventIngestionUrl: String
+}

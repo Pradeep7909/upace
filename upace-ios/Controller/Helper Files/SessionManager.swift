@@ -68,6 +68,7 @@ class SessionManager: NSObject {
             if(token == nil){
                 return nil
             }else {
+                LOG("Authorization :  Bearer " + "\(token ?? "")")
                 return ["Authorization": "Bearer " + "\(token ?? "")"]
             }
         } else {

@@ -13,15 +13,18 @@
 		AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */; };
 		AE5636BA2B9F11CE001454C4 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B92B9F11CE001454C4 /* OverviewViewController.swift */; };
 		AE5636BC2B9F11DB001454C4 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636BB2B9F11DB001454C4 /* FAQViewController.swift */; };
+		AE61DE722BA48FED0091C77F /* AmazonChimeSDKMedia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE61DE712BA48FED0091C77F /* AmazonChimeSDKMedia.xcframework */; };
 		AE68A94A2B9A2ACB00AF97C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9492B9A2ACB00AF97C4 /* MainViewController.swift */; };
 		AE68A94C2B9A2B4600AF97C4 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94B2B9A2B4600AF97C4 /* FeaturesViewController.swift */; };
 		AE68A94E2B9A2B6600AF97C4 /* UniversitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94D2B9A2B6600AF97C4 /* UniversitiesViewController.swift */; };
 		AE68A9502B9A2B7A00AF97C4 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94F2B9A2B7A00AF97C4 /* CoursesViewController.swift */; };
 		AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9512B9A2B8D00AF97C4 /* ProfileViewController.swift */; };
 		AE68A9542B9A2CE900AF97C4 /* TabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9532B9A2CE900AF97C4 /* TabPageViewController.swift */; };
+		AEA46C6D2BA4AAAA0056D55E /* AmazonChimeSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE61DE6D2BA48FCF0091C77F /* AmazonChimeSDK.xcframework */; };
 		AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */; };
 		AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */; };
 		AEC2D0512B98F67600B2CEA0 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */; };
+		AEDCB4602BA1D7B2007E0EA0 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */; };
 		AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241B2B999E31007B0D37 /* SessionManager.swift */; };
 		AEE5241E2B999EC5007B0D37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241D2B999EC5007B0D37 /* Model.swift */; };
 		AEE524202B999F23007B0D37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */; };
@@ -44,6 +47,19 @@
 		AEF095492B98B1D0000B53BE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF095482B98B1D0000B53BE /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AEA46C6F2BA4AAAA0056D55E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8B2B33FA218BFF755642A923 /* Pods-upace-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upace-ios.debug.xcconfig"; path = "Target Support Files/Pods-upace-ios/Pods-upace-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +67,8 @@
 		AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothListViewController.swift; sourceTree = "<group>"; };
 		AE5636B92B9F11CE001454C4 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		AE5636BB2B9F11DB001454C4 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		AE61DE6D2BA48FCF0091C77F /* AmazonChimeSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmazonChimeSDK.xcframework; path = "Pods/AmazonChimeSDK-Bitcode/AmazonChimeSDK.xcframework"; sourceTree = "<group>"; };
+		AE61DE712BA48FED0091C77F /* AmazonChimeSDKMedia.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmazonChimeSDKMedia.xcframework; path = "Pods/AmazonChimeSDKMedia-Bitcode/AmazonChimeSDKMedia.xcframework"; sourceTree = "<group>"; };
 		AE68A9492B9A2ACB00AF97C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AE68A94B2B9A2B4600AF97C4 /* FeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturesViewController.swift; sourceTree = "<group>"; };
 		AE68A94D2B9A2B6600AF97C4 /* UniversitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversitiesViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +78,7 @@
 		AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfieldView.swift; sourceTree = "<group>"; };
 		AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextfieldView.xib; sourceTree = "<group>"; };
 		AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
 		AEE5241B2B999E31007B0D37 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		AEE5241D2B999EC5007B0D37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -91,6 +110,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA46C6D2BA4AAAA0056D55E /* AmazonChimeSDK.xcframework in Frameworks */,
+				AE61DE722BA48FED0091C77F /* AmazonChimeSDKMedia.xcframework in Frameworks */,
 				3024F0684D85B4C69EE49ADD /* Pods_upace_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +172,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AEDCB45E2BA1D786007E0EA0 /* Video Call */ = {
+			isa = PBXGroup;
+			children = (
+				AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */,
+			);
+			path = "Video Call";
+			sourceTree = "<group>";
+		};
 		AEE868FA2B98526D00549A94 = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +219,7 @@
 				AEE869222B98732300549A94 /* Registration */,
 				AE68A9482B9A2A8A00AF97C4 /* Tabbar */,
 				AE5636B12B9E26CA001454C4 /* Event Screen */,
+				AEDCB45E2BA1D786007E0EA0 /* Video Call */,
 				AEE8691F2B98674A00549A94 /* Helper Files */,
 			);
 			path = Controller;
@@ -249,6 +279,8 @@
 		B3A0007992E53BD3BAA33753 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE61DE712BA48FED0091C77F /* AmazonChimeSDKMedia.xcframework */,
+				AE61DE6D2BA48FCF0091C77F /* AmazonChimeSDK.xcframework */,
 				EA69D404241D6D0D3BFA7D06 /* Pods_upace_ios.framework */,
 			);
 			name = Frameworks;
@@ -275,6 +307,7 @@
 				AEE869002B98526D00549A94 /* Frameworks */,
 				AEE869012B98526D00549A94 /* Resources */,
 				0B7D101490982EC808D0EEDE /* [CP] Embed Pods Frameworks */,
+				AEA46C6F2BA4AAAA0056D55E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -406,6 +439,7 @@
 				AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */,
 				AEE524222B99C013007B0D37 /* Singleton.swift in Sources */,
 				AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */,
+				AEDCB4602BA1D7B2007E0EA0 /* VideoCallViewController.swift in Sources */,
 				AE5636BC2B9F11DB001454C4 /* FAQViewController.swift in Sources */,
 				AEE869212B98676A00549A94 /* Constants.swift in Sources */,
 				AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */,

@@ -213,7 +213,10 @@ extension MainViewController : CommonTopViewDelegate{
     }
     
     func rightTopButtonTapped() {
-        LOG("Right button Tapped")
+//        LOG("Right button Tapped")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "VideoCallViewController" ) as! VideoCallViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
 }
 

@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import AmazonChimeSDK
+import AmazonChimeSDKMedia
+import AWSCore
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let credentials = AWSStaticCredentialsProvider(accessKey: "AKIAUATGMLVC57FVIZNU", secretKey: "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")
+        let configuration = AWSServiceConfiguration(region: AWSRegionType.APSouth1 , credentialsProvider: credentials)
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
         return true
     }
 

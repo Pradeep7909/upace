@@ -8,5 +8,8 @@ target 'upace-ios' do
   # Pods for upace-ios
     pod 'Alamofire'
     pod 'SDWebImage'
-
+    
+    pod 'AWSCore'
+    pod 'AmazonChimeSDK-Bitcode'
+    
 end

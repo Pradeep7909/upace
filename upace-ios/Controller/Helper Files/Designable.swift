@@ -48,21 +48,21 @@ class CustomViewShadow : UIView{
             updateShadowPath()
         }
     }
-
+    
     @IBInspectable var shadowColor: UIColor = .clear {
         didSet {
             self.layer.shadowColor = shadowColor.cgColor
             updateShadowPath()
         }
     }
-
+    
     @IBInspectable var shadowRadius: CGFloat = 0 {
         didSet {
             self.layer.shadowRadius = shadowRadius
             updateShadowPath()
         }
     }
-
+    
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 0, height: 0) {
         didSet {
             self.layer.shadowOffset = shadowOffset
@@ -71,30 +71,30 @@ class CustomViewShadow : UIView{
     }
     
     @IBInspectable var hideTopShadow: Bool = false {
-           didSet {
-               updateShadowPath()
-           }
-       }
+        didSet {
+            updateShadowPath()
+        }
+    }
     @IBInspectable var hideBottomShadow: Bool = false {
-           didSet {
-               updateShadowPath()
-           }
-       }
-       
-       override func layoutSubviews() {
-           super.layoutSubviews()
-           updateShadowPath()
-       }
-       
+        didSet {
+            updateShadowPath()
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        updateShadowPath()
+    }
+    
     private func updateShadowPath() {
         let path: UIBezierPath
         if hideTopShadow {
-                path = UIBezierPath(roundedRect: bounds.insetBy(dx: shadowRadius, dy: shadowRadius), cornerRadius: layer.cornerRadius)
-            } else if hideBottomShadow {
-                path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - shadowRadius), cornerRadius: layer.cornerRadius)
-            } else {
-                path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height))
-            }
+            path = UIBezierPath(roundedRect: bounds.insetBy(dx: shadowRadius, dy: shadowRadius), cornerRadius: layer.cornerRadius)
+        } else if hideBottomShadow {
+            path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - shadowRadius), cornerRadius: layer.cornerRadius)
+        } else {
+            path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height))
+        }
         layer.shadowPath = path.cgPath
     }
 }
@@ -137,3 +137,69 @@ class CustomImage: UIImageView {
     }
 }
 
+
+
+@IBDesignable
+class GradientView: UIView {
+    
+    // MARK: - Properties
+    
+    @IBInspectable var startColor: UIColor = .white {
+        didSet {
+            updateGradient()
+        }
+    }
+    
+    @IBInspectable var endColor: UIColor = .black {
+        didSet {
+            updateGradient()
+        }
+    }
+    
+    @IBInspectable var isVertical: Bool = true {
+        didSet {
+            updateGradient()
+        }
+    }
+    
+    private let gradientLayer = CAGradientLayer()
+    
+    // MARK: - Initialization
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupGradient()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupGradient()
+    }
+    
+    // MARK: - Setup
+    
+    private func setupGradient() {
+        layer.addSublayer(gradientLayer)
+        updateGradient()
+    }
+    
+    // MARK: - Layout
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = bounds
+    }
+    
+    // MARK: - Private Methods
+    
+    private func updateGradient() {
+        gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
+        if isVertical {
+            gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+            gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        } else {
+            gradientLayer.startPoint = CGPoint(x: 0, y: 0.5)
+            gradientLayer.endPoint = CGPoint(x: 1, y: 0.5)
+        }
+    }
+}
