@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
     
     //MARK: IBActions
     @IBAction func eventButtonAction(_ sender: Any) {
-        print("🌟eventDetail?.total \(eventDetail?.total)")
+        print("🌟eventDetail?.total \(eventDetail?.total ?? 0)" )
         
         if eventDetail?.total == nil || eventDetail?.total == 0{
             emailSubscribe()
@@ -47,6 +47,10 @@ class HomeViewController: UIViewController {
     
     @IBAction func viewAllArticlesButton(_ sender: Any) {
         
+        let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+        popupVC.modalPresentationStyle = .overFullScreen
+        popupVC.popupType = .join
+        present(popupVC, animated: false, completion: nil)
     }
     
     

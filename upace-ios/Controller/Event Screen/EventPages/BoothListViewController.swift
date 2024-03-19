@@ -54,13 +54,10 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BoothCell") as! BoothCell
         
-        // Do any additional setup after loading the view.
-        
-        
         // here first check is already in queue
         
         let booth = boothData?.data[indexPath.row]
-        print("🚀booth : \(booth)")
+        print("🚀booth : \(String(describing: booth))")
         cell.queueView.isHidden = true
         
         cell.boothName.text = booth?.University.name
@@ -72,8 +69,35 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
         } else {
             print("Invalid URL string")
         }
-//        cell.boothLogoImage.sd_setImage(with: URL(string: booth?.University.logo ?? "" ), placeholderImage: UIImage(named: "boothLogo"))
         
+        cell.joinButtonClick = {
+            
+            param = [
+                "event_id" : booth?.event_id ?? "" ,
+                "university_id" : booth?.university_external_id ?? "" ,
+            ]
+            
+            SessionManager.shared.methodForApiCalling(url: U_BASE + U_QUEUE, method: .post, parameter: param, objectClass: QueueResponse.self, requestCode: U_QUEUE) { response in
+                guard let response = response else{
+                    LOG("Error in getting response")
+                    return
+                }
+                let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
+                popupVC.modalPresentationStyle = .overFullScreen
+                popupVC.popupType = .send
+                popupVC.tokenNumber = response.data?.token_number ?? 0
+                self.present(popupVC, animated: false, completion: nil)
+                
+                cell.joinButtonView.isHidden = true
+                cell.queueView.isHidden = false
+                cell.positionLabel.text = "\(response.data?.token_number ?? 0)"
+                
+                
+            }
+            
+            
+        }
+      
         return cell
     }
     
@@ -89,13 +113,12 @@ class BoothCell : UITableViewCell{
     @IBOutlet weak var queueView: UIView!
     @IBOutlet weak var positionLabel: UILabel!
     
+    var joinButtonClick: (()-> Void)? = nil
     
     @IBAction func joinButtonAction(_ sender: Any) {
-        //first register for that event by calling api
-        
-        joinButtonView.isHidden = true
-        queueView.isHidden = false
-
+        if let joinButtonClick = self.joinButtonClick {
+            joinButtonClick()
+        }
     }
 
 }

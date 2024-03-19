@@ -13,24 +13,21 @@ import AWSCore
 class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
 
     
-    private var isUsingFrontCamera = true
+    private var isMute = false
+    private var isLocalVideoStarted = false
     private var sideMenuWidth : CGFloat = 300
     private var isSideMenuShowing =  false
-    let captureSession = AVCaptureSession()
-    
     
     var meetingSession: MeetingSession?
-    var videoTileController: VideoTileController?
-    var remoteVideoView2: DefaultVideoRenderView?
     
-    var joinData : JoinInfoResponse?
-    var mediaPlacementData : MediaPlacementResponse?
+    private var joinData : JoinInfoResponse?
+    private var mediaPlacementData : MediaPlacementResponse?
     
-    let defaultVideoRenderView = DefaultVideoRenderView(frame: .infinite)
+    var defaultVideoRenderView = DefaultVideoRenderView()
+    var previewRenderView = DefaultVideoRenderView()
     
-    @IBOutlet weak var renderVideoView: DefaultVideoRenderView!
-    
-//    @IBOutlet weak var renderVideoView: DefaultVideoRenderView!
+    @IBOutlet weak var videoView: UIView!
+    @IBOutlet weak var localVideoView: UIView!
     
     @IBOutlet weak var micImageView: UIImageView!
     @IBOutlet weak var videoImageView: UIImageView!
@@ -40,6 +37,8 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var sideMenuButtonView: UIView!
     @IBOutlet weak var dotsButtonView: UIView!
     @IBOutlet weak var noStudentQueueLabel: UILabel!
+    
+    
     
     //side queue outlets
     @IBOutlet weak var sideQueueView: CustomView!
@@ -52,64 +51,107 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
 
         LOG("\(type(of: self)) viewDidLoad")
-        self.view.addSubview(defaultVideoRenderView)
-        self.view.bringSubviewToFront(defaultVideoRenderView)
-        sideViewSetup()
         
-//        addRenderView()
+
+        sideViewSetup()
+        getJoinData()
+        
 
     }
     
     override func viewDidAppear(_ animated: Bool) {
-//        startLocalVideo(camera: .front)
-//        getJoinData()
         
+        defaultVideoRenderView = DefaultVideoRenderView(frame: videoView.frame)
+        defaultVideoRenderView.contentMode = .scaleAspectFit
+        self.videoView.addSubview(defaultVideoRenderView)
+        self.videoView.bringSubviewToFront(defaultVideoRenderView)
         
-        getJoinData()
+        previewRenderView = DefaultVideoRenderView(frame: localVideoView.frame)
+        previewRenderView.contentMode = .scaleAspectFit
+
+        previewRenderView.frame.origin.y = 0
+        previewRenderView.frame.origin.x = 0
+
+        self.localVideoView.addSubview(previewRenderView)
+        self.localVideoView.bringSubviewToFront(previewRenderView)
         
+
     }
 
     //MARK: IBActions
     @IBAction func flipButtonAction(_ sender: Any) {
+        guard let meetingSession = self.meetingSession else {
+            return
+        }
         
-        let newPosition: AVCaptureDevice.Position = isUsingFrontCamera ? .back : .front
+        meetingSession.audioVideo.switchCamera()
         
-        if let newDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: newPosition),
-           let newInput = try? AVCaptureDeviceInput(device: newDevice) {
-            captureSession.beginConfiguration()
-            captureSession.inputs.forEach { captureSession.removeInput($0) }
-            captureSession.addInput(newInput)
-            captureSession.commitConfiguration()
-            isUsingFrontCamera = !isUsingFrontCamera
+        // Add logic to respond to camera type change.
+        switch meetingSession.audioVideo.getActiveCamera()?.type {
+        case .videoFrontCamera:
+            // Handle logic for front camera
+            print("Switched to front camera")
+        case .videoBackCamera:
+            // Handle logic for back camera
+            print("Switched to back camera")
+        default:
+            // Handle other camera types if needed
+            print("Unknown camera type")
         }
         
     }
     
     
     @IBAction func micButtonAction(_ sender: Any) {
+        guard let meetingSession = self.meetingSession else {
+            return
+        }
         
+        if isMute {
+            if meetingSession.audioVideo.realtimeLocalUnmute(){
+                isMute = false
+                micImageView.image = UIImage(named: "mic")
+            }
+        }else{
+            if meetingSession.audioVideo.realtimeLocalMute(){
+                isMute = true
+                micImageView.image = UIImage(named: "mute")
+            }
+        }
     }
     
 
     @IBAction func videoButtonAction(_ sender: Any) {
-        // Toggle the video track's enabled state
-        do {
-            try self.meetingSession?.audioVideo.startLocalVideo()
-        } catch PermissionError.videoPermissionError {
-            // Handle the case where no permission is granted.
-        } catch {
-            // Catch some other errors.
-        }
         
+        guard let meetingSession = self.meetingSession else {
+            return
+        }
+        if isLocalVideoStarted {
+            meetingSession.audioVideo.stopLocalVideo()
+            isLocalVideoStarted = false
+            videoImageView.image = UIImage(named: "videoOff")
+        }else{
+            do{
+                try meetingSession.audioVideo.startLocalVideo()
+                isLocalVideoStarted = true
+                videoImageView.image = UIImage(named: "videoOn")
+            }catch{
+                print("Error in starting local video")
+            }
+        }
     }
     
     
     @IBAction func speakerButtonAction(_ sender: Any) {
-
+        
     }
  
     
     @IBAction func callButtonAction(_ sender: Any) {
+        if let meetingSession = self.meetingSession  {
+            meetingSession.audioVideo.stop()
+        }
+
         self.navigationController?.popViewController(animated: false)
     }
     
@@ -133,11 +175,9 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
     func getJoinData(){
         
         
-//        let url = U_BASE + U_MEETING + "/" + ""
-//        
-//        "https://vfair-api.upace.in/api/v1/v-fair/meeting/602b67d38482c26e443c286b?event_id=vfe-4146c92c-8695-4623-9cc7-d78bec44bb38&counsellor_id=65e808e557c83feec9d2f95a"
-//        
-        let url = "https://vfair-beta-api.upace.in/api/v1/v-fair/meeting/602b67d38482c26e443c286b?event_id=vfe-86e00b66-400f-41b7-962a-e0a8acaba612&counsellor_id=65e808e557c83feec9d2f95a"
+//        let url = U_BASE + U_MEETING + "/" + "MeetingId" + "?event_id=" + "eventId" + "&counsellor_id=" + counsellorId
+    
+        let url = "https://vfair-beta-api.upace.in/api/v1/v-fair/meeting/602b67d38482c26e443c286b?event_id=vfe-8fe7641a-f336-41f2-a4dd-c540a3aa2380&counsellor_id=65e808e557c83feec9d2f95a"
         
         SessionManager.shared.methodForApiCalling(url: url, method: .get, parameter: nil, objectClass: JoinInfoResponse.self, requestCode: U_EVENT) { response in
             guard let response = response else{
@@ -165,7 +205,6 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
                 }
             }
         }
-        
     }
     
     
@@ -211,14 +250,7 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
         }
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+
 
     
     
@@ -245,10 +277,7 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
         
         let attendee = Attendee(attendeeId: joinData.Attendee!.AttendeeId , externalUserId: joinData.Attendee!.ExternalUserId, joinToken: joinData.Attendee!.JoinToken)
         let myCreateAttendeeResponse = CreateAttendeeResponse(attendee: attendee)
-        
-        
-        print("🟢🟢🟢Meeting : \(meeting)")
-        
+
         
         let meetingConfig = MeetingSessionConfiguration(createMeetingResponse: myCreatemeetingresponse, createAttendeeResponse: myCreateAttendeeResponse)
         
@@ -256,6 +285,7 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
         // 2. Initialize the Meeting Session
         let logger = ConsoleLogger(name: "MeetingViewController")
         meetingSession = DefaultMeetingSession(configuration: meetingConfig, logger: logger)
+        
         
         // 3. Staring meeting seesion
         do {
@@ -274,7 +304,8 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
         // Start local video.
         do {
             try self.meetingSession?.audioVideo.startLocalVideo()
-            print("Succes in start ocal video")
+            isLocalVideoStarted = true
+            print("🟢Succes in start ocal video")
         } catch PermissionError.videoPermissionError {
             print("PermissionError.videoPermissionError")
             // Handle the case where no permission is granted.
@@ -283,10 +314,27 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
             // Catch some other errors.
         }
         
+        guard let meetingSession = self.meetingSession else {
+            return
+        }
         
-        
+        //start audio
+        if meetingSession.audioVideo.realtimeLocalUnmute(){
+            isMute = false
+            DispatchQueue.main.async{
+                self.micImageView.image = UIImage(named: "mic")
+            }
+            
+        }else{
+            isMute = true
+            DispatchQueue.main.async{
+                self.micImageView.image = UIImage(named: "mute")
+            }
+        }
+
+     
         // Start remote video.
-        meetingSession?.audioVideo.startRemoteVideo()
+        meetingSession.audioVideo.startRemoteVideo()
         
         
         //4. resister observer
@@ -295,7 +343,6 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
 //        self.meetingSession?.audioVideo.addRealtimeObserver(observer: self)
         self.meetingSession?.audioVideo.addVideoTileObserver(observer: self)
         
-        //5. connecting video (binfing video)
     }
     
 
@@ -316,55 +363,55 @@ class VideoCallViewController: UIViewController, UIGestureRecognizerDelegate {
 
 extension VideoCallViewController: AudioVideoObserver {
     func audioSessionDidStartConnecting(reconnecting: Bool) {
-        LOG("audioSessionDidStartConnecting")
+        LOG("🖥️audioSessionDidStartConnecting")
     }
     
     func audioSessionDidStart(reconnecting: Bool) {
-        LOG("audioSessionDidStart \(reconnecting)")
+        LOG("🖥️audioSessionDidStart \(reconnecting)")
     }
     
     func audioSessionDidStopWithStatus(sessionStatus: AmazonChimeSDK.MeetingSessionStatus) {
-        LOG("audioSessionDidStopWithStatus \(sessionStatus)")
+        LOG("🖥️audioSessionDidStopWithStatus \(sessionStatus)")
     }
     
     func audioSessionDidCancelReconnect() {
-        LOG("audioSessionDidCancelReconnect")
+        LOG("🖥️audioSessionDidCancelReconnect")
     }
     
     func connectionDidRecover() {
-        LOG("connectionDidRecover")
+        LOG("🖥️connectionDidRecover")
     }
     
     func connectionDidBecomePoor() {
-        LOG("connectionDidBecomePoor")
+        LOG("🖥️connectionDidBecomePoor")
     }
     
     func videoSessionDidStartConnecting() {
-        LOG("videoSessionDidStartConnecting")
+        LOG("🖥️videoSessionDidStartConnecting")
     }
     
     func videoSessionDidStartWithStatus(sessionStatus: AmazonChimeSDK.MeetingSessionStatus) {
-        LOG("videoSessionDidStartWithStatus \(sessionStatus)")
+        LOG("🖥️videoSessionDidStartWithStatus \(sessionStatus)")
     }
     
     func videoSessionDidStopWithStatus(sessionStatus: AmazonChimeSDK.MeetingSessionStatus) {
-        LOG("videoSessionDidStopWithStatus \(sessionStatus)")
+        LOG("🖥️videoSessionDidStopWithStatus \(sessionStatus)")
     }
     
     func audioSessionDidDrop() {
-        LOG("audioSessionDidDrop")
+        LOG("🖥️audioSessionDidDrop")
     }
     
     func remoteVideoSourcesDidBecomeAvailable(sources: [AmazonChimeSDK.RemoteVideoSource]) {
-        LOG("audioSessionDidStartConnecting")
+        LOG("🖥️audioSessionDidStartConnecting")
     }
     
     func remoteVideoSourcesDidBecomeUnavailable(sources: [AmazonChimeSDK.RemoteVideoSource]) {
-        LOG("remoteVideoSourcesDidBecomeAvailable \(sources)")
+        LOG("🖥️remoteVideoSourcesDidBecomeAvailable \(sources)")
     }
     
     func cameraSendAvailabilityDidChange(available: Bool) {
-        LOG("cameraSendAvailabilityDidChange \(available)")
+        LOG("🖥️cameraSendAvailabilityDidChange \(available)")
     }
     
 }
@@ -373,31 +420,31 @@ extension VideoCallViewController: AudioVideoObserver {
 
 extension VideoCallViewController: RealtimeObserver {
     func volumeDidChange(volumeUpdates: [AmazonChimeSDK.VolumeUpdate]) {
-        LOG("volumeDidChange \(volumeUpdates)")
+        LOG("🔊volumeDidChange \(volumeUpdates)")
     }
     
     func signalStrengthDidChange(signalUpdates: [AmazonChimeSDK.SignalUpdate]) {
-        LOG("signalStrengthDidChange \(signalUpdates)")
+        LOG("🔊signalStrengthDidChange \(signalUpdates)")
     }
     
     func attendeesDidJoin(attendeeInfo: [AmazonChimeSDK.AttendeeInfo]) {
-        LOG("attendeesDidJoin \(attendeeInfo)")
+        LOG("🔊attendeesDidJoin \(attendeeInfo)")
     }
     
     func attendeesDidLeave(attendeeInfo: [AmazonChimeSDK.AttendeeInfo]) {
-        LOG("attendeesDidLeave \(attendeeInfo)")
+        LOG("🔊attendeesDidLeave \(attendeeInfo)")
     }
     
     func attendeesDidMute(attendeeInfo: [AmazonChimeSDK.AttendeeInfo]) {
-        LOG("attendeesDidMute \(attendeeInfo)")
+        LOG("🔊attendeesDidMute \(attendeeInfo)")
     }
     
     func attendeesDidUnmute(attendeeInfo: [AmazonChimeSDK.AttendeeInfo]) {
-        LOG("attendeesDidUnmute \(attendeeInfo)")
+        LOG("🔊attendeesDidUnmute \(attendeeInfo)")
     }
     
     func attendeesDidDrop(attendeeInfo: [AmazonChimeSDK.AttendeeInfo]) {
-        LOG("attendeesDidDrop \(attendeeInfo)")
+        LOG("🔊attendeesDidDrop \(attendeeInfo)")
     }
     
     
@@ -407,66 +454,42 @@ extension VideoCallViewController: RealtimeObserver {
 
 extension VideoCallViewController: VideoTileObserver {
     func videoTileSizeDidChange(tileState: AmazonChimeSDK.VideoTileState) {
-        LOG("videoTileSizeDidChange \(tileState)")
+        LOG("📀videoTileSizeDidChange \(tileState)")
         
-        // Bind video tile.
-        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
+//        // Bind video tile.
+//        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
     }
     
     func videoTileDidAdd(tileState: VideoTileState) {
-        LOG("🟢videoTileDidAdd \(tileState)")
+        LOG("🟢📀videoTileDidAdd \(tileState)")
         
-        // Bind video tile.
-        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
+        if tileState.isLocalTile{
+            self.meetingSession?.audioVideo.bindVideoView(videoView: previewRenderView, tileId: tileState.tileId )
+        }else{
+            self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
+        }
     }
     func videoTileDidRemove(tileState: VideoTileState) {
-        LOG("videoTileDidRemove \(tileState)")
+        LOG("🔴📀videoTileDidRemove \(tileState)")
         
-        
+        if tileState.isLocalTile{
+            previewRenderView.resetImage()
+        }else{
+            defaultVideoRenderView.resetImage()
+        }
+ 
     }
     func videoTileDidPause(tileState: VideoTileState) {
-        LOG("videoTileDidPause \(tileState)")
+        LOG("📀videoTileDidPause \(tileState)")
         // Bind video tile.
-        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
+//        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
     }
     func videoTileDidResume(tileState: VideoTileState) {
-        LOG("videoTileDidResume \(tileState)")
+        LOG("📀videoTileDidResume \(tileState)")
         // Bind video tile.
-        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
+//        self.meetingSession?.audioVideo.bindVideoView(videoView: defaultVideoRenderView, tileId: tileState.tileId )
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -513,11 +536,6 @@ extension VideoCallViewController  : UITableViewDataSource, UITableViewDelegate 
         let swipeGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
         swipeGesture.delegate = self
         self.view.addGestureRecognizer(swipeGesture)
-
-        // Tap Gesture Recognizer
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
-//        tapGesture.delegate = self
-//        self.darkScreenView.addGestureRecognizer(tapGesture)
     }
     
     // MARK: - Gesture Handling

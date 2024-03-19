@@ -90,12 +90,14 @@ class CustomViewShadow : UIView{
         let path: UIBezierPath
         if hideTopShadow {
             path = UIBezierPath(roundedRect: bounds.insetBy(dx: shadowRadius, dy: shadowRadius), cornerRadius: layer.cornerRadius)
+            layer.shadowPath = path.cgPath
         } else if hideBottomShadow {
             path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height - shadowRadius), cornerRadius: layer.cornerRadius)
+            layer.shadowPath = path.cgPath
         } else {
-            path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height))
+            //nothing
         }
-        layer.shadowPath = path.cgPath
+       
     }
 }
 

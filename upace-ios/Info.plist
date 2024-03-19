@@ -4,8 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Upace need to access your camera</string>
-    <key>NSMicrophoneUsageDescription</key>
-    <string>Upace needs access to the microphone for audio calls.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Upace needs access to the microphone for audio calls.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

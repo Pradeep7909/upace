@@ -31,6 +31,7 @@
 		AEE524222B99C013007B0D37 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE524212B99C013007B0D37 /* Singleton.swift */; };
 		AEE524242B99C528007B0D37 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE524232B99C528007B0D37 /* HomeViewController.swift */; };
 		AEE5F0AD2B9B3905003E5A64 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5F0AC2B9B3905003E5A64 /* InitialViewController.swift */; };
+		AEE7D4EC2BA953C5006EC6F0 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE7D4EB2BA953C5006EC6F0 /* PopupViewController.swift */; };
 		AEE869072B98526D00549A94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869062B98526D00549A94 /* AppDelegate.swift */; };
 		AEE869092B98526D00549A94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE869082B98526D00549A94 /* SceneDelegate.swift */; };
 		AEE8690E2B98526D00549A94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEE8690C2B98526D00549A94 /* Main.storyboard */; };
@@ -85,6 +86,7 @@
 		AEE524212B99C013007B0D37 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		AEE524232B99C528007B0D37 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AEE5F0AC2B9B3905003E5A64 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		AEE7D4EB2BA953C5006EC6F0 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		AEE869032B98526D00549A94 /* upace-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "upace-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE869062B98526D00549A94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEE869082B98526D00549A94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */,
+				AEE7D4EB2BA953C5006EC6F0 /* PopupViewController.swift */,
 			);
 			path = "Video Call";
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				AE5636BA2B9F11CE001454C4 /* OverviewViewController.swift in Sources */,
 				AEE524242B99C528007B0D37 /* HomeViewController.swift in Sources */,
 				AE68A94C2B9A2B4600AF97C4 /* FeaturesViewController.swift in Sources */,
+				AEE7D4EC2BA953C5006EC6F0 /* PopupViewController.swift in Sources */,
 				AEE869262B987B5800549A94 /* LoginViewController.swift in Sources */,
 				AEE869242B98743300549A94 /* Designable.swift in Sources */,
 				AE68A9542B9A2CE900AF97C4 /* TabPageViewController.swift in Sources */,
@@ -599,6 +603,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "upace-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Upace;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -629,6 +634,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "upace-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Upace;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

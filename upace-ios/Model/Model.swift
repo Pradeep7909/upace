@@ -64,6 +64,7 @@ struct BoothResponse: Codable {
 struct BoothData: Codable {
     let id: String
     let event_id: String
+    let university_external_id: String?
     let vFairEvent: Event
     let University: University
 }
@@ -127,4 +128,20 @@ struct MediaPlacementResponse: Codable {
     let screenViewingUrl: String
     let screenSharingUrl: String
     let eventIngestionUrl: String
+}
+
+struct QueueResponse: Codable {
+    let status: Int?
+    let message: String?
+    let data: QueueData?
+}
+
+struct QueueData: Codable{
+    let id: String?
+    let user_id: String?
+    let university_id: String?
+    let event_id: String?
+    let counsellor_id: String?
+    let token_number: Int?
+    let status: String?
 }
