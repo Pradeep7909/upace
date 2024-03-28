@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3024F0684D85B4C69EE49ADD /* Pods_upace_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA69D404241D6D0D3BFA7D06 /* Pods_upace_ios.framework */; };
+		AE12337C2BB5734A00F1528A /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12337B2BB5734A00F1528A /* NotificationViewController.swift */; };
 		AE5636B32B9E26FE001454C4 /* SingleEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */; };
 		AE5636B52B9F10B6001454C4 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */; };
 		AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */; };
@@ -20,11 +21,13 @@
 		AE68A9502B9A2B7A00AF97C4 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A94F2B9A2B7A00AF97C4 /* CoursesViewController.swift */; };
 		AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9512B9A2B8D00AF97C4 /* ProfileViewController.swift */; };
 		AE68A9542B9A2CE900AF97C4 /* TabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68A9532B9A2CE900AF97C4 /* TabPageViewController.swift */; };
+		AE9FF3772BB29FE7003B2F6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE9FF3762BB29FE7003B2F6E /* GoogleService-Info.plist */; };
+		AEA175782BB480FD0076F225 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA175772BB480FD0076F225 /* FirebaseManager.swift */; };
 		AEA46C6D2BA4AAAA0056D55E /* AmazonChimeSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE61DE6D2BA48FCF0091C77F /* AmazonChimeSDK.xcframework */; };
 		AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */; };
 		AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */; };
 		AEC2D0512B98F67600B2CEA0 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */; };
-		AEDCB4602BA1D7B2007E0EA0 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */; };
+		AEDCB4602BA1D7B2007E0EA0 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */; };
 		AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241B2B999E31007B0D37 /* SessionManager.swift */; };
 		AEE5241E2B999EC5007B0D37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241D2B999EC5007B0D37 /* Model.swift */; };
 		AEE524202B999F23007B0D37 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */; };
@@ -63,6 +66,7 @@
 
 /* Begin PBXFileReference section */
 		8B2B33FA218BFF755642A923 /* Pods-upace-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upace-ios.debug.xcconfig"; path = "Target Support Files/Pods-upace-ios/Pods-upace-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		AE12337B2BB5734A00F1528A /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventViewController.swift; sourceTree = "<group>"; };
 		AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		AE5636B72B9F11BD001454C4 /* BoothListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoothListViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +80,12 @@
 		AE68A94F2B9A2B7A00AF97C4 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		AE68A9512B9A2B8D00AF97C4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		AE68A9532B9A2CE900AF97C4 /* TabPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPageViewController.swift; sourceTree = "<group>"; };
+		AE9FF3762BB29FE7003B2F6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AEA175772BB480FD0076F225 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfieldView.swift; sourceTree = "<group>"; };
 		AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextfieldView.xib; sourceTree = "<group>"; };
 		AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
-		AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
+		AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
 		AEE5241B2B999E31007B0D37 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		AEE5241D2B999EC5007B0D37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -121,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE12337A2BB572E700F1528A /* Additional Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AE12337B2BB5734A00F1528A /* NotificationViewController.swift */,
+			);
+			path = "Additional Screens";
+			sourceTree = "<group>";
+		};
 		AE5636B12B9E26CA001454C4 /* Event Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,13 +188,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AEDCB45E2BA1D786007E0EA0 /* Video Call */ = {
+		AEDCB45E2BA1D786007E0EA0 /* Meeting */ = {
 			isa = PBXGroup;
 			children = (
-				AEDCB45F2BA1D7B2007E0EA0 /* VideoCallViewController.swift */,
+				AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */,
 				AEE7D4EB2BA953C5006EC6F0 /* PopupViewController.swift */,
 			);
-			path = "Video Call";
+			path = Meeting;
 			sourceTree = "<group>";
 		};
 		AEE868FA2B98526D00549A94 = {
@@ -211,6 +225,7 @@
 				AEE8691C2B9857C600549A94 /* Fonts */,
 				AEE8690F2B98526F00549A94 /* Assets.xcassets */,
 				AEE869142B98526F00549A94 /* Info.plist */,
+				AE9FF3762BB29FE7003B2F6E /* GoogleService-Info.plist */,
 			);
 			path = "upace-ios";
 			sourceTree = "<group>";
@@ -222,7 +237,8 @@
 				AEE869222B98732300549A94 /* Registration */,
 				AE68A9482B9A2A8A00AF97C4 /* Tabbar */,
 				AE5636B12B9E26CA001454C4 /* Event Screen */,
-				AEDCB45E2BA1D786007E0EA0 /* Video Call */,
+				AEDCB45E2BA1D786007E0EA0 /* Meeting */,
+				AE12337A2BB572E700F1528A /* Additional Screens */,
 				AEE8691F2B98674A00549A94 /* Helper Files */,
 			);
 			path = Controller;
@@ -255,6 +271,7 @@
 				AEE5241B2B999E31007B0D37 /* SessionManager.swift */,
 				AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */,
 				AEE524212B99C013007B0D37 /* Singleton.swift */,
+				AEA175772BB480FD0076F225 /* FirebaseManager.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -273,8 +290,8 @@
 			children = (
 				AEE8692E2B989AB200549A94 /* CommonTopView.xib */,
 				AEE8692C2B989AA000549A94 /* CommonTopView.swift */,
-				AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */,
 				AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */,
+				AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */,
 			);
 			path = XibView;
 			sourceTree = "<group>";
@@ -365,6 +382,7 @@
 				AEE869102B98526F00549A94 /* Assets.xcassets in Resources */,
 				AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */,
 				AEE8690E2B98526D00549A94 /* Main.storyboard in Resources */,
+				AE9FF3772BB29FE7003B2F6E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +437,7 @@
 			files = (
 				AEE524202B999F23007B0D37 /* ActivityIndicator.swift in Sources */,
 				AEF095472B98AB15000B53BE /* SignupViewController.swift in Sources */,
+				AE12337C2BB5734A00F1528A /* NotificationViewController.swift in Sources */,
 				AE5636BA2B9F11CE001454C4 /* OverviewViewController.swift in Sources */,
 				AEE524242B99C528007B0D37 /* HomeViewController.swift in Sources */,
 				AE68A94C2B9A2B4600AF97C4 /* FeaturesViewController.swift in Sources */,
@@ -426,6 +445,7 @@
 				AEE869262B987B5800549A94 /* LoginViewController.swift in Sources */,
 				AEE869242B98743300549A94 /* Designable.swift in Sources */,
 				AE68A9542B9A2CE900AF97C4 /* TabPageViewController.swift in Sources */,
+				AEA175782BB480FD0076F225 /* FirebaseManager.swift in Sources */,
 				AEE869282B98935200549A94 /* Functions.swift in Sources */,
 				AE68A94A2B9A2ACB00AF97C4 /* MainViewController.swift in Sources */,
 				AE68A9502B9A2B7A00AF97C4 /* CoursesViewController.swift in Sources */,
@@ -443,7 +463,7 @@
 				AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */,
 				AEE524222B99C013007B0D37 /* Singleton.swift in Sources */,
 				AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */,
-				AEDCB4602BA1D7B2007E0EA0 /* VideoCallViewController.swift in Sources */,
+				AEDCB4602BA1D7B2007E0EA0 /* MeetingViewController.swift in Sources */,
 				AE5636BC2B9F11DB001454C4 /* FAQViewController.swift in Sources */,
 				AEE869212B98676A00549A94 /* Constants.swift in Sources */,
 				AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */,

@@ -115,6 +115,7 @@
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextField" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8E-OL-Oo9" userLabel="textfield title">
                                     <rect key="frame" x="55" y="12.999999999999998" width="58.666666666666657" height="19.333333333333329"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="14"/>
                                     <color key="textColor" name="K_DARK_GREY"/>
                                     <nil key="highlightedColor"/>

@@ -22,7 +22,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         LOG("\(type(of: self)) viewDidLoad")
         intitializeView()
-        commonTopView.delegate = self
         textfieldSetup()
     }
     
@@ -137,16 +136,5 @@ extension LoginViewController : CustomTextfieldDelegate{
         default:
             self.passwordTextField.textField.resignFirstResponder()
         }
-    }
-}
-
-//MARK: TopView Delegate
-extension LoginViewController: CommonTopViewDelegate {
-    func rightTopButtonTapped() {
-        // no use here
-    }
-    
-    func leftTopButtonTapped() {
-        //no use in login screen
     }
 }

@@ -15,7 +15,6 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var checkedImage: UIImageView!
     @IBOutlet weak var commonTopView: CommonTopView!
     
-    
     @IBOutlet weak var nameTextField: CustomTextfieldView!
     @IBOutlet weak var emailTextField: CustomTextfieldView!
     @IBOutlet weak var numberTextField: CustomTextfieldView!
@@ -29,7 +28,9 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         LOG("\(type(of: self)) viewDidLoad")
-        commonTopView.delegate = self
+        commonTopView.leftButton = {
+            self.navigationController?.popViewController(animated: true)
+        }
         textfieldSetup()
         
     }
@@ -197,17 +198,5 @@ extension SignupViewController : CustomTextfieldDelegate{
         default:
             self.confirmPasswordTextField.textField.resignFirstResponder()
         }
-    }
-}
-
-//MARK: TopView Delegate
-extension SignupViewController: CommonTopViewDelegate {
-    
-    func leftTopButtonTapped() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    func rightTopButtonTapped() {
-        // no use here
     }
 }

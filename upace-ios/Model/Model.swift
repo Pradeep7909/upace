@@ -25,9 +25,10 @@ struct LoginData: Codable {
 }
 
 struct UserDetail: Codable {
-    let id: String
+    let id: String?
     let name: String?
     let email: String?
+    let user_external_id: String?
     let mobile_phone: String?
     let profile_image: String?
 }
@@ -58,7 +59,7 @@ struct MenuCell : Codable{
 }
 
 struct BoothResponse: Codable {
-    let data: [BoothData]
+    var data: [BoothData]
 }
 
 struct BoothData: Codable {
@@ -67,6 +68,10 @@ struct BoothData: Codable {
     let university_external_id: String?
     let vFairEvent: Event
     let University: University
+    var status : String?
+    var token_number : Int?
+    var counsellor_id: String?
+    var queue_id: String?
 }
 
 
@@ -144,4 +149,30 @@ struct QueueData: Codable{
     let counsellor_id: String?
     let token_number: Int?
     let status: String?
+}
+
+
+struct MeetingJoinFirebaseResponse : Codable{
+    let data : String?
+    let title : String?
+    let user_external_id : String?
+}
+
+struct MeetingJoinResponse : Codable{
+    let data : MeetingJoinData?
+    let title : String?
+    let user_external_id : String?
+}
+
+struct MeetingJoinData : Codable{
+    let user: UserDetail?
+    let event_id: String?
+    let university_id: String?
+    let counsellor_id: String?
+    let queue_id: String?
+    let university_name: String?
+}
+
+struct QueueDetailResponse : Codable{
+    let data : [QueueData]
 }

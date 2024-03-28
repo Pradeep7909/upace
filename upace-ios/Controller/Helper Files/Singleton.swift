@@ -33,6 +33,7 @@ class Singleton {
         }
     }
     var selectedEvent : Event?
+    var currentJoinMeeting : MeetingJoinResponse?
     
     private let userDefaults = UserDefaults.standard
     
@@ -47,6 +48,10 @@ class Singleton {
     func handleLogout() {
         currentUser = nil
         userDefaults.removeObject(forKey: UD_USER_DETAIL)
+        // Remove observer for showMeetingViewController notification
+        FirebaseManager.shared.removeObservers()
+        NotificationCenter.default.removeObserver(self, name: .showMeetingViewController, object: nil)
+            
     }
     
     private func saveUser() {

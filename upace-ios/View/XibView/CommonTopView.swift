@@ -7,30 +7,27 @@
 
 import UIKit
 
-//Protocol for button action
-protocol CommonTopViewDelegate: AnyObject {
-    func leftTopButtonTapped()
-    func rightTopButtonTapped()
-}
+
 
 @IBDesignable
 class CommonTopView: UIView {
    
-    weak var delegate: CommonTopViewDelegate?
-    
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var rightImageHeightConstraint: NSLayoutConstraint!
     
+    var leftButton: (() -> Void)?
+    var rightButton: (() -> Void)?
+    
     
     //MARK: Button Actions
     @IBAction func backButtonAction(_ sender: UIButton) {
-        delegate?.leftTopButtonTapped()
+        leftButton?()
     }
     
     @IBAction func rightButtonAction(_ sender: Any) {
-        delegate?.rightTopButtonTapped()
+        rightButton?()
     }
     
     

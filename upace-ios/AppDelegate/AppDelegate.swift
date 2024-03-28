@@ -9,6 +9,7 @@ import UIKit
 import AmazonChimeSDK
 import AmazonChimeSDKMedia
 import AWSCore
+import FirebaseCore
 
 
 @main
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let credentials = AWSStaticCredentialsProvider(accessKey: "AKIAUATGMLVC57FVIZNU", secretKey: "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")
         let configuration = AWSServiceConfiguration(region: AWSRegionType.APSouth1 , credentialsProvider: credentials)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        FirebaseApp.configure()
         
         return true
     }

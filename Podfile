@@ -12,6 +12,7 @@ target 'upace-ios' do
     pod 'AWSCore'
     pod 'AmazonChimeSDK-Bitcode'
     
+    pod 'Firebase/Auth'
     pod 'Firebase/Messaging'
     pod 'Firebase/RemoteConfig'
     pod 'Firebase/Database'

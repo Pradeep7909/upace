@@ -69,6 +69,17 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         LOG("\(type(of: self)) viewDidLoad")
         initialize()
+        
+        commonTopView.leftButton = {
+            self.showSideMenu(duration: 0.3)
+        }
+        
+        commonTopView.rightButton = {
+            let notificationVC =  self.storyboard?.instantiateViewController(identifier: "NotificationViewController") as! NotificationViewController
+            self.navigationController?.pushViewController(notificationVC, animated: true)
+        }
+        
+        FirebaseManager.shared.setupFirebaseObserver()
     }
     
     //MARK: IBAction
@@ -94,7 +105,6 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
         coursesLineWidth.constant = 0
         profileLineWidth.constant = 0
         commonTopView.title.text = ""
-        commonTopView.delegate = self
         homeImageHeightConstraint.constant = 30
         homeImage.tintColor = .K_BLUE
         homeLabel.textColor = .K_BLUE
@@ -202,24 +212,7 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
             return profileImageHeightConstraint
         }
     }
-    
-    
 }
-
-//MARK: TopView Delegate
-extension MainViewController : CommonTopViewDelegate{
-    func leftTopButtonTapped() {
-        showSideMenu(duration: 0.3)
-    }
-    
-    func rightTopButtonTapped() {
-//        LOG("Right button Tapped")
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "VideoCallViewController" ) as! VideoCallViewController
-        self.navigationController?.pushViewController(vc, animated: true)
-        
-    }
-}
-
 
 
 //MARK: Side Menu View

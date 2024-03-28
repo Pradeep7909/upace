@@ -6,24 +6,59 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseDatabase
 
 class UniversitiesViewController: UIViewController {
+    
+    var databaseRef: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         LOG("\(type(of: self)) viewDidLoad")
-        // Do any additional setup after loading the view.
+        setupFirebase()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupFirebase() {
+        // Configure Firebase app
+        guard FirebaseApp.app() != nil else {
+            print("Firebase app is not configured.")
+            return
+        }
+        
+        // Reference the "actions" child node
+        databaseRef = Database.database().reference().child("actions")
+        
+        // Observer for new child nodes added
+        databaseRef.observe(.childAdded) { snapshot in
+            if let key = snapshot.key as? String, let value = snapshot.value {
+                print("New child added:")
+                print("Key: \(key), Value: \(value)")
+            } else {
+                print("No data or key found for the new child.")
+            }
+        }
+        
+        // Observer for updated nodes
+        databaseRef.observe(.childChanged) { snapshot in
+            if let key = snapshot.key as? String, let value = snapshot.value {
+                print("Node updated:")
+                print("Key: \(key), Value: \(value)")
+            } else {
+                print("No data or key found for the updated node.")
+            }
+        }
+        
+        // Observer for deleted nodes
+        databaseRef.observe(.childRemoved) { snapshot in
+            if let key = snapshot.key as? String, let value = snapshot.value {
+                print("Node deleted:")
+                print("Key: \(key), Value: \(value)")
+            } else {
+                print("No data or key found for the deleted node.")
+            }
+        }
     }
-    */
 
 }
+

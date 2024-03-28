@@ -58,7 +58,7 @@ func calculateTableViewHeight(for tableView: UITableView) -> CGFloat {
 
 
 
-func parse(data : String) -> MediaPlacementResponse?{
+func parseMediaData(data : String) -> MediaPlacementResponse?{
     
     // Your mediaPlacement string
     let mediaPlacementString = """
