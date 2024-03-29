@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3024F0684D85B4C69EE49ADD /* Pods_upace_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA69D404241D6D0D3BFA7D06 /* Pods_upace_ios.framework */; };
+		AE0540662BB69192003802A6 /* call.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AE0540652BB69192003802A6 /* call.mp3 */; };
 		AE12337C2BB5734A00F1528A /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE12337B2BB5734A00F1528A /* NotificationViewController.swift */; };
 		AE5636B32B9E26FE001454C4 /* SingleEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */; };
 		AE5636B52B9F10B6001454C4 /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */; };
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		8B2B33FA218BFF755642A923 /* Pods-upace-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-upace-ios.debug.xcconfig"; path = "Target Support Files/Pods-upace-ios/Pods-upace-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		AE0540652BB69192003802A6 /* call.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = call.mp3; sourceTree = "<group>"; };
 		AE12337B2BB5734A00F1528A /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		AE5636B22B9E26FE001454C4 /* SingleEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEventViewController.swift; sourceTree = "<group>"; };
 		AE5636B42B9F10B6001454C4 /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
@@ -222,7 +224,7 @@
 				AEE8691B2B98546A00549A94 /* Model */,
 				AEE8691A2B98545F00549A94 /* Controller */,
 				AEB723162B9C27B00008A80C /* View */,
-				AEE8691C2B9857C600549A94 /* Fonts */,
+				AEE8691C2B9857C600549A94 /* Resources */,
 				AEE8690F2B98526F00549A94 /* Assets.xcassets */,
 				AEE869142B98526F00549A94 /* Info.plist */,
 				AE9FF3762BB29FE7003B2F6E /* GoogleService-Info.plist */,
@@ -252,12 +254,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AEE8691C2B9857C600549A94 /* Fonts */ = {
+		AEE8691C2B9857C600549A94 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				AEE8691D2B98647B00549A94 /* Nunito-Font.ttf */,
+				AE0540652BB69192003802A6 /* call.mp3 */,
 			);
-			path = Fonts;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AEE8691F2B98674A00549A94 /* Helper Files */ = {
@@ -378,6 +381,7 @@
 			files = (
 				AEE8691E2B98647B00549A94 /* Nunito-Font.ttf in Resources */,
 				AEE8692F2B989AB200549A94 /* CommonTopView.xib in Resources */,
+				AE0540662BB69192003802A6 /* call.mp3 in Resources */,
 				AEE869132B98526F00549A94 /* LaunchScreen.storyboard in Resources */,
 				AEE869102B98526F00549A94 /* Assets.xcassets in Resources */,
 				AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */,

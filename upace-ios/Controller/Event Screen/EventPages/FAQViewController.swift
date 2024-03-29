@@ -17,6 +17,8 @@ class FAQViewController: UIViewController {
         FAQ(question: "Are there informational sessions?", answer: "Yes, we offer sessions on admissions, careers, and more. Check the schedule for details.")
     ]
     
+    var visibleFAQCell: FAQCell?
+    
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -43,6 +45,37 @@ extension FAQViewController : UITableViewDelegate, UITableViewDataSource{
         cell.answerLabel.text = faq.answer
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? FAQCell {
+            
+            if cell == visibleFAQCell{
+                cell.answerLabel.isHidden = !cell.answerLabel.isHidden
+                cell.chevronImage.image = UIImage(systemName: cell.answerLabel.isHidden ? "chevron.down" : "chevron.up")
+                cell.contentView.layoutIfNeeded()
+                tableView.beginUpdates()
+                tableView.endUpdates()
+                
+                return
+            }
+            
+            if let currentVisibleCell = visibleFAQCell {
+                currentVisibleCell.answerLabel.isHidden = true
+                currentVisibleCell.chevronImage.image = UIImage(systemName: "chevron.down" )
+                currentVisibleCell.contentView.layoutIfNeeded()
+                tableView.beginUpdates()
+                tableView.endUpdates()
+            }
+            
+            
+            visibleFAQCell = cell
+            cell.answerLabel.isHidden = false
+            cell.chevronImage.image = UIImage(systemName: "chevron.up")
+            cell.contentView.layoutIfNeeded()
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
+    }
 }
 
 class FAQCell : UITableViewCell{
@@ -51,16 +84,5 @@ class FAQCell : UITableViewCell{
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var chevronImage: UIImageView!
-    
-    @IBAction func chevronButtonAction(_ sender: UIButton) {
-        answerLabel.isHidden = !answerLabel.isHidden
-        chevronImage.image = UIImage(systemName: answerLabel.isHidden ? "chevron.down" : "chevron.up")
-        
-        // Reload the cell to update its size
-            if let tableView = self.superview as? UITableView, let indexPath = tableView.indexPath(for: self) {
-                tableView.beginUpdates()
-                tableView.endUpdates()
-            }
-    }
     
 }

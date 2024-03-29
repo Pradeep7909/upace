@@ -6,16 +6,23 @@
 //
 
 import UIKit
+import AudioToolbox
+import AVFoundation
 
 class PopupViewController: UIViewController {
     
     //MARK: Variables
     var popupType : PopupType = .join
     var tokenNumber : Int = 1
-    var countdownTimer: Timer?
-    var secondsRemaining = 60
-    var meetingData : MeetingJoinResponse?
+    private var countdownTimer: Timer?
+    private var secondsRemaining = 60
+    private var meetingData : MeetingJoinResponse?
     var navigateToMeetingCallback: (() -> Void)?
+    var audioPlayer: AVAudioPlayer?
+    var generator: UIImpactFeedbackGenerator?
+    var vibrationTimer: Timer?
+    
+    
     
     @IBOutlet weak var greetUserLabel: UILabel!
     @IBOutlet weak var aboutPopLabel: UILabel!
@@ -38,7 +45,32 @@ class PopupViewController: UIViewController {
     }
     
     
-    func initializeView(){
+ 
+    
+    //MARK: IBActions
+    @IBAction func joinButtonAction(_ sender: UIButton) {
+        
+        if popupType == .join{
+            // join the request and move to meeting screen
+            joinRequest()
+            stopEffects()
+            
+        }else{
+            self.dismiss(animated: false)
+        }
+        
+    }
+    
+    
+    @IBAction func notInterestedButton(_ sender: Any) {
+        notInterestedToJoin()
+    }
+    
+    
+    //MARK: Functions
+    
+    
+    private func initializeView(){
         greetUserLabel.text = "Hii \(Singleton.shared.currentUser?.name ?? "")"
         if popupType == .join{
             self.meetingData = FirebaseManager.shared.currentMeeting
@@ -48,6 +80,7 @@ class PopupViewController: UIViewController {
             queueNumberLabel.isHidden = true
             updateDynamicText()
             countdownTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateDynamicText), userInfo: nil, repeats: true)
+            playJoinSoundAndVibrate()
             
         }else{
             aboutPopLabel.text = "Thank you for applying"
@@ -59,30 +92,59 @@ class PopupViewController: UIViewController {
             imageView.isHidden = true
             centerColorView.backgroundColor = .systemOrange
             notInterestedView.isHidden = true
+            vibrateDeviceOneTime()
         }
     }
     
     
-    
-    //MARK: IBActions
-    @IBAction func joinButtonAction(_ sender: UIButton) {
+    private func playJoinSoundAndVibrate() {
+        guard let soundURL = Bundle.main.url(forResource: "call", withExtension: "mp3") else {
+            print("Failed to load join sound.")
+            return
+        }
         
-        if popupType == .join{
-            // join the request and move to meeting screen
-            joinRequest()
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            audioPlayer?.numberOfLoops = -1 // Loop indefinitely
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.play()
             
-        }else{
-            self.dismiss(animated: false)
+            // Start vibration
+            generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator?.prepare()
+            startVibration()
+        } catch {
+            print("Error loading audio file: \(error.localizedDescription)")
         }
     }
     
+    private func startVibration() {
+        vibrationTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.generator?.impactOccurred()
+        }
+    }
     
-    @IBAction func notInterestedButton(_ sender: Any) {
-        notInterestedToJoin()
+    // for stop vibrate and sound
+    private func stopEffects() {
+        generator = nil
+        audioPlayer?.stop()
+        audioPlayer?.currentTime = 0
+        
+        vibrationTimer?.invalidate()
+        vibrationTimer = nil
     }
     
     
-    //MARK: Functions
+    
+    
+    private func vibrateDeviceOneTime() {
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.prepare()
+        generator.impactOccurred()
+    }
+    
+    
+    
     @objc private func updateDynamicText() {
         let dynamicText = "Join in \(secondsRemaining)s or your queue will be shifted."
         
@@ -100,14 +162,15 @@ class PopupViewController: UIViewController {
         
         // Check if the countdown is complete
         if secondsRemaining < 0 {
-            countdownTimer?.invalidate()
             notInterestedToJoin()
         }
     }
     
+    
     private func notInterestedToJoin(){
         self.dismiss(animated: false)
         countdownTimer?.invalidate()
+        stopEffects()
         
         print("queue id \(meetingData?.data?.queue_id ?? "")")
         SessionManager.shared.methodForApiCalling(url: U_BASE + U_QUEUE + "/\(meetingData?.data?.queue_id ?? "")" , method: .delete ,parameter: nil, objectClass: LoginResponse.self, requestCode: U_QUEUE) { response in
@@ -116,7 +179,10 @@ class PopupViewController: UIViewController {
                 return
             }
             print("Successfully delete queue")
+            FirebaseManager.shared.sendNotification(type: "deleteQueue", queueData: nil, meetingData: self.meetingData?.data)
             FirebaseManager.shared.delegate?.queueUpdated()
+            
+            
         }
     }
     

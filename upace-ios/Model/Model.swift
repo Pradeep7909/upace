@@ -12,6 +12,11 @@ struct ErrorResponse: Codable{
     var url: String?
 }
 
+struct SuccessResponse: Codable{
+    let status: String?
+    let message: String?
+}
+
 struct LoginResponse: Codable {
     let status: Int?
     let data: LoginData?
@@ -31,6 +36,17 @@ struct UserDetail: Codable {
     let user_external_id: String?
     let mobile_phone: String?
     let profile_image: String?
+    let fcm_token: String?
+    let google_id : String?
+    let email_verified_at: String?
+    let phone_verified_at : String?
+    let status: String?
+    let user_type: String?
+    let password_generated: Bool?
+    let referral_code : String?
+    let referred_by_user_id: String?
+    let createdAt : String?
+    let updatedAt : String?
 }
 
 struct EventResponse: Codable {
@@ -149,6 +165,9 @@ struct QueueData: Codable{
     let counsellor_id: String?
     let token_number: Int?
     let status: String?
+    let invigilator_id : String?
+    let updatedAt: String?
+    let createdAt: String?
 }
 
 

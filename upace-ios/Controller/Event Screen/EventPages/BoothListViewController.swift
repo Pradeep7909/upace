@@ -30,10 +30,24 @@ class BoothListViewController: UIViewController {
         LOG("\(type(of: self)) viewDidLoad")
         tableView.contentInset.top = 10
         FirebaseManager.shared.delegate = self
+        initializeView()
         getBooths()
     }
     
     //MARK: Functions
+    
+    private func initializeView(){
+        //these is used for fetching booth data if it's already fetched one time for better user expereience
+        if Singleton.shared.savedBoothList != nil{
+            self.boothData = Singleton.shared.savedBoothList
+            self.noBoothLabel.isHidden = self.boothData?.data.count ?? 0 > 0
+            self.tableView.reloadData()
+            let totalHeight = calculateTableViewHeight(for: self.tableView)
+            BoothListViewController.delegate?.setContainerHeight(height: totalHeight)
+        }
+    }
+    
+    
     func getBooths(){
         SessionManager.shared.methodForApiCalling(url: U_BASE + U_EVENT + U_BOOTH_UNIVERSITIES + (Singleton.shared.selectedEvent?.id ?? "") , method: .get, parameter: nil, objectClass: BoothResponse.self, requestCode: U_BOOTH_UNIVERSITIES) { response in
             guard let response = response else{
@@ -73,6 +87,7 @@ class BoothListViewController: UIViewController {
             self.tableView.reloadData()
             let totalHeight = calculateTableViewHeight(for: self.tableView)
             print("Total height of table view: \(totalHeight)")
+            Singleton.shared.savedBoothList = self.boothData
             BoothListViewController.delegate?.setContainerHeight(height: totalHeight)
         }
     }
@@ -96,7 +111,6 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
         // here first check is already in queue
         
         let booth = boothData?.data[indexPath.row]
-        print("🚀booth : \(String(describing: booth))")
         cell.queueView.isHidden = true
         cell.completedView.isHidden = true
         cell.joinButtonView.isHidden = false
@@ -158,7 +172,7 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
                     cell.queueView.isHidden = false
                     cell.positionLabel.text = "\(response.data?.token_number ?? 0)"
                     
-                    FirebaseManager.shared.informToFetchQueue(counsellorID: response.data?.counsellor_id ?? "")
+                    FirebaseManager.shared.sendNotification(type: "fetchQueue", queueData: response.data , meetingData: nil)
                 }
             }
             

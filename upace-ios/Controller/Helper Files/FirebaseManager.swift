@@ -102,13 +102,13 @@ class FirebaseManager{
             // Create a MeetingJoinResponse instance
             let meetingJoinResponse = MeetingJoinResponse(
                 data: parseFirebaseMeetingData(data: meetingJoinFirebaseResponse.data ?? ""),
-                title: meetingJoinFirebaseResponse.title, 
+                title: meetingJoinFirebaseResponse.title,
                 user_external_id: meetingJoinFirebaseResponse.user_external_id
             )
             print("original Data : \(data)")
             
             print("meetingJoinResponse : \(meetingJoinResponse)")
-
+            
             if meetingJoinResponse.title == "joinAttendee"{
                 currentMeeting = meetingJoinResponse
                 showJoinPopup()
@@ -121,7 +121,7 @@ class FirebaseManager{
             }else if meetingJoinResponse.title == "queue updated"{
                 delegate?.queueUpdated()
             }
-
+            
         } catch {
             print("Error decoding JSON: \(error.localizedDescription)")
         }
@@ -185,31 +185,83 @@ class FirebaseManager{
     
     
     
-    func informToFetchQueue(counsellorID: String) {
-        // Reference the "actions" child node
-        let databaseRef = Database.database().reference().child("actions").child(counsellorID)
+    func sendNotification(type: String, queueData: QueueData?, meetingData : MeetingJoinData?) {
         
-        // Generate a unique key using childByAutoId()
-        let firebaseKey = databaseRef.childByAutoId().key ?? ""
+        if type == "deleteQueue"{
+            param = [
+                "type": type,
+                "user_external_ids": [meetingData?.counsellor_id ?? "" ],
+                "data": [
+                    "university_id":  meetingData?.university_id ?? "",
+                    "event_id": meetingData?.event_id ?? "",
+                    "queue_id": meetingData?.queue_id ?? ""
+                ]
+            ]
+        }else{
+            let user : [String: Any] = [
+                "id": Singleton.shared.currentUser?.id ?? "",
+                "name": Singleton.shared.currentUser?.name ?? "",
+                "fcm_token": Singleton.shared.currentUser?.fcm_token ?? "",
+                "user_external_id": Singleton.shared.currentUser?.user_external_id ?? "",
+                "email": Singleton.shared.currentUser?.email ?? "",
+                "google_id": Singleton.shared.currentUser?.google_id ?? "",
+                "mobile_phone": Singleton.shared.currentUser?.mobile_phone ?? "",
+                "profile_image": Singleton.shared.currentUser?.profile_image ?? "",
+                "email_verified_at": Singleton.shared.currentUser?.email_verified_at ?? "",
+                "phone_verified_at": Singleton.shared.currentUser?.phone_verified_at ?? "",
+                "status": Singleton.shared.currentUser?.status ?? "",
+                "user_type": Singleton.shared.currentUser?.user_type ?? "",
+                "password_generated": Singleton.shared.currentUser?.password_generated ?? false,
+                "referral_code": Singleton.shared.currentUser?.referral_code ?? "",
+                "referred_by_user_id": Singleton.shared.currentUser?.referred_by_user_id ?? "",
+                "createdAt": Singleton.shared.currentUser?.createdAt ?? "",
+                "updatedAt": Singleton.shared.currentUser?.updatedAt ?? ""
+            ]
+            
+            let newData : [String : Any] =
+            [
+                "id": queueData?.id ?? "",
+                "university_id": queueData?.university_id ?? "",
+                "user_id": queueData?.user_id ?? "",
+                "token_number": queueData?.token_number ?? 0,
+                "event_id": queueData?.event_id ?? "",
+                "counsellor_id": queueData?.counsellor_id ?? "",
+                "invigilator_id": queueData?.invigilator_id ?? "",
+                "status": queueData?.status ?? "",
+                "updatedAt": queueData?.updatedAt ?? "",
+                "createdAt": queueData?.createdAt ?? "",
+                "User": user
+            ]
+            
+            
+            // Create the data dictionary
+            let data: [String: Any] = [
+                "university_id": queueData?.university_id ?? "",
+                "event_id": queueData?.event_id ?? "",
+                "appendData": newData
+            ]
+            
+            
+            let counsellorId = queueData?.counsellor_id ?? ""
+            
+            param = [
+                "type": type,
+                "user_external_ids": [counsellorId],
+                "data": data
+            ]
+        }
         
-        let dataObject: [String: Any] = [
-            "data": "",
-            "firebase_key": firebaseKey,
-            "title": "fetchQueue",
-            "user_external_id": counsellorID
-        ]
-        
-        // Set the data in Firebase Realtime Database
-        let dataPath = databaseRef.child(firebaseKey)
-        dataPath.setValue(dataObject) { (error, _) in
-            if let error = error {
-                print("Error setting data in Firebase: \(error.localizedDescription)")
-            } else {
-                print("Data successfully set in Firebase")
+        SessionManager.shared.methodForApiCalling(url: U_BASE + U_SEND_NOTIFICATION , method: .post, parameter: param, objectClass: SuccessResponse.self, requestCode: U_SEND_NOTIFICATION) { response in
+            guard let response = response else{
+                LOG("Error in getting response")
+                return
             }
+            
+            LOG("Notifaction send successfully to counsellor to update queue")
+            
         }
     }
-
+    
 }
 
 

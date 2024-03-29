@@ -58,8 +58,10 @@ class SingleEventViewController: UIViewController{
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        
         heightForStopPointofScrolling = eventBannerImageView.frame.size.height  + eventDescriptionView.frame.height - topView.frame.size.height
-        minContainerViewHeight = view.frame.height - topView.frame.size.height - 40
+        let bottomSafeArea = view.safeAreaInsets.bottom
+        minContainerViewHeight = view.frame.height - topView.frame.size.height - 40 - bottomSafeArea
         containerHeightConstraint.constant = max (minContainerViewHeight, boothListHeight)
     
     }
@@ -135,29 +137,25 @@ class SingleEventViewController: UIViewController{
 
 extension SingleEventViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if scrollView == self.mainScrollView{
-            if scrollView.contentOffset.y > 0 {
-                topView.backgroundColor = .systemBackground
-                eventTopLabel.isHidden = false
-                backButtonView.backgroundColor = .clear
-                backButtonImageview.tintColor = Singleton.shared.currentTheme == "light" ? .black : .white
-                
-            } else {
-                topView.backgroundColor = .clear
-                eventTopLabel.isHidden = true
-                backButtonView.backgroundColor = .black.withAlphaComponent(0.1)
-                backButtonImageview.tintColor = .white
-            }
-        }else{
-            print("scrollView \(scrollView)")
-        }
-        
-        
+   
         if scrollView.contentOffset.y  > heightForStopPointofScrolling{
             staticTabView.isHidden = false
+            
+            self.topView.backgroundColor = .systemBackground
+            
+            UIView.animate(withDuration: 0.1) {
+                self.eventTopLabel.isHidden = false
+                self.backButtonView.backgroundColor = .clear
+                self.backButtonImageview.tintColor = Singleton.shared.currentTheme == "light" ? .black : .white
+            }
         }else{
             staticTabView.isHidden = true
+            UIView.animate(withDuration: 0.1) {
+                self.topView.backgroundColor = .clear
+                self.eventTopLabel.isHidden = true
+                self.backButtonView.backgroundColor = .black.withAlphaComponent(0.1)
+                self.backButtonImageview.tintColor = .white
+            }
         }
     }
 }

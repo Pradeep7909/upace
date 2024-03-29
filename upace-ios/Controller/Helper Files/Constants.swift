@@ -29,6 +29,7 @@ let U_EMAIL_SUBSCRIBE = "cms/email-subscribe"
 let U_BOOTH_UNIVERSITIES = "/universities?event_id="
 let U_MEETING = "v-fair/meeting"
 let U_QUEUE = "meeting/queue"
+let U_SEND_NOTIFICATION = "send-notification"
 
 
 //MARK: USER DEFAULTS

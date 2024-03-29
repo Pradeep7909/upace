@@ -218,6 +218,7 @@ class MeetingViewController: UIViewController, UIGestureRecognizerDelegate {
             }
             
             FirebaseManager.shared.delegate?.queueUpdated()
+            FirebaseManager.shared.sendNotification(type: "deleteQueue", queueData: nil, meetingData: meetingData?.data)
             
             Singleton.shared.currentJoinMeeting = nil
             

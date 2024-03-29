@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
         
         let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
         popupVC.modalPresentationStyle = .overFullScreen
-        popupVC.popupType = .join
+        popupVC.popupType = .send
         present(popupVC, animated: false, completion: nil)
     }
     
@@ -62,7 +62,9 @@ class HomeViewController: UIViewController {
     
     
     func getEvents(){
-        SessionManager.shared.methodForApiCalling(url: U_BASE + U_EVENT, method: .get, parameter: nil, objectClass: EventResponse.self, requestCode: U_EVENT) { response in
+        
+        // right now fetching on latest event if want all event then remove U_LATEST endpoint
+        SessionManager.shared.methodForApiCalling(url: U_BASE + U_EVENT + U_LATEST , method: .get, parameter: nil, objectClass: EventResponse.self, requestCode: U_EVENT) { response in
             guard let response = response else{
                 LOG("Error in getting response")
                 return
