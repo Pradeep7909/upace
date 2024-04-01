@@ -47,6 +47,7 @@ class LoginViewController: UIViewController {
                 guard let response = response else{
                     LOG("Error in getting response")
                     self.commonTopView.setProgressToZero()
+                    self.commonTopView.setProgressToZero()
                     self.loginButtonView.backgroundColor = K_BLUE_COLOR
                     self.loginButtonView.isUserInteractionEnabled = true
                     return
@@ -70,7 +71,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func googleButtonAction(_ sender: UIButton) {
         
-        ToastManager.shared.showToast(message: "Login with google is not avaiable right now", type: .success)
+        ToastManager.shared.showToast(message: "Login with google is not avaiable right now", type: .warning)
     }
     
     

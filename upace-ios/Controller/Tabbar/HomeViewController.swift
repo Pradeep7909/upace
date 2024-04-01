@@ -69,6 +69,9 @@ class HomeViewController: UIViewController {
                 LOG("Error in getting response")
                 return
             }
+            if response.total == 0 {
+                return
+            }
             self.eventDetail = response
             self.eventTypeView.isHidden = false
             self.eventTimeView.isHidden = false

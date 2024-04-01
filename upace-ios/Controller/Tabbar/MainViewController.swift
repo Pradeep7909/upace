@@ -328,6 +328,8 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
                     rootViewController.popToRootViewController(animated: true)
                 }
             }
+        }else{
+            ToastManager.shared.showToast(message: "Work is in progress", type: .warning)
         }
     }
 }

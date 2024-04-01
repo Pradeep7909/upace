@@ -72,7 +72,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func googleButtonAction(_ sender: UIButton) {
-        ToastManager.shared.showToast(message: "Login with google is not avaiable right now", type: .success)
+        ToastManager.shared.showToast(message: "Login with google is not avaiable right now", type: .warning)
     }
     
     @IBAction func recieveUpdateButtonAction(_ sender: UIButton) {

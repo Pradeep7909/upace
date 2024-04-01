@@ -11,6 +11,7 @@ import UIKit
 
 enum Type {
     case success
+    case warning
     case error
 }
 
@@ -27,8 +28,8 @@ class ToastManager {
             return
         }
         
-        let backgroundColor : UIColor = type == .error ? .systemRed : .systemGreen
-        let iconImage: UIImage? = UIImage(named: type == .error ? "error" : "success" )
+        let backgroundColor : UIColor = type == .error ? .systemRed : ( type == .success ? .systemGreen : .systemYellow )
+        let iconImage: UIImage? = UIImage(named: type == .success ? "success" : "error" )
         // Remove the current toast view if it exists
         currentToastView?.removeFromSuperview()
         
@@ -79,7 +80,7 @@ class ToastManager {
         
         
         // Calculate label height based on the message content
-        let labelSize = toastLabel.sizeThatFits(CGSize(width: toastLabelWidth, height: CGFloat.greatestFiniteMagnitude))
+        let labelSize = toastLabel.sizeThatFits(CGSize(width: toastLabelWidth - 40 , height: CGFloat.greatestFiniteMagnitude))
         let toastLabelHeight = labelSize.height
         toastLabel.frame.size.height = toastLabelHeight
         
