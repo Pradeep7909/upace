@@ -19,11 +19,12 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     static var delegate: MainViewControllerDelegate?
     private var isSideMenuShowing =  false
     var menuItems: [MenuCell] = [
-        MenuCell(imageName: "user-square", title: "Profile information"),
-        MenuCell(imageName: "clipboard", title: "Application profile"),
-        MenuCell(imageName: "refer", title: "Refer & Earn"),
-        MenuCell(imageName: "theme", title: "Change Theme"),
-        MenuCell(imageName: "login", title: "Logout")
+        MenuCell(imageName: "user-square", title: NSLocalizedString("Profile information", comment: "")),
+        MenuCell(imageName: "clipboard", title: NSLocalizedString("Application profile", comment: "")),
+        MenuCell(imageName: "refer", title: NSLocalizedString("Refer & Earn", comment: "")),
+        MenuCell(imageName: "theme", title: NSLocalizedString("Change Theme", comment: "")),
+        MenuCell(imageName: "languages", title: NSLocalizedString("Change Language", comment: "")),
+        MenuCell(imageName: "login", title: NSLocalizedString("Logout", comment: ""))
     ]
     
     //MARK: IBOutlet
@@ -86,15 +87,15 @@ class MainViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func tabButton(_ sender: UIButton) {
         switch(sender.tag){
         case 0:
-            tabChange(tag: 0, tabTitle: "")
+            tabChange(tag: 0, tabTitle: NSLocalizedString("", comment: ""))
         case 1:
-            tabChange(tag: 1, tabTitle: "Features")
+            tabChange(tag: 1, tabTitle: NSLocalizedString("Features", comment: ""))
         case 2:
-            tabChange(tag: 2, tabTitle: "Universities")
+            tabChange(tag: 2, tabTitle: NSLocalizedString("Universities", comment: ""))
         case 3:
-            tabChange(tag: 3, tabTitle: "Courses")
+            tabChange(tag: 3, tabTitle: NSLocalizedString("Courses", comment: ""))
         default:
-            tabChange(tag: 4, tabTitle: "Profile")
+            tabChange(tag: 4, tabTitle: NSLocalizedString("Profile", comment: ""))
         }
     }
     
@@ -295,6 +296,7 @@ extension  MainViewController {
     }
 }
 
+//MARK: Side Table
 extension MainViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
@@ -321,6 +323,15 @@ extension MainViewController : UITableViewDataSource, UITableViewDelegate{
         }else if indexPath.row == 3{
             Singleton.shared.currentTheme = Singleton.shared.currentTheme == "light" ? "dark" : "light"
         }else if indexPath.row == 4{
+            
+            if Singleton.shared.selectedLanguage == "en"{
+                Singleton.shared.changeAppLanguage(to: "hi")
+            }else{
+                Singleton.shared.changeAppLanguage(to: "en")
+            }
+            self.navigationController?.popToRootViewController(animated: true)
+            
+        }else if indexPath.row == 5{
             Singleton.shared.handleLogout()
             if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
                 if let window = scene.windows.first,

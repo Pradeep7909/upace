@@ -16,6 +16,7 @@ class Singleton {
         print("Singletone user is setted because init is called")
         currentUser = loadUser()
         currentTheme = loadTheme()
+        selectedLanguage = UserDefaults.standard.string(forKey: "selectedLanguage")
         setAppTheme()
     }
     
@@ -35,6 +36,7 @@ class Singleton {
     var selectedEvent : Event?
     var currentJoinMeeting : MeetingJoinResponse?
     var savedBoothList : BoothResponse?
+    var selectedLanguage : String?
     
     private let userDefaults = UserDefaults.standard
     
@@ -85,4 +87,11 @@ class Singleton {
             window.overrideUserInterfaceStyle = currentTheme == "dark" ? .dark : .light
         }
     }
+    
+    func changeAppLanguage(to languageCode: String) {
+        UserDefaults.standard.set(languageCode, forKey: "selectedLanguage")
+        Bundle.setLanguage(languageCode)
+        selectedLanguage = languageCode
+    }
+
 }

@@ -1,0 +1,52 @@
+/* 
+  Localizable.strings
+  upace-ios
+
+  Created by Qualwebs on 03/04/24.
+  
+*/
+
+//Side Menu Screen
+"Profile information" = "Profile information";
+"Application profile" = "Application profile";
+"Refer & Earn" = "Refer & Earn";
+"Change Theme" = "Change Theme";
+"Change Language" = "Change Language";
+"Logout" = "Logout";
+
+//Titles
+"Features" = "Features";
+"Universities" = "Universities";
+"Courses" = "Courses";
+"Profile" = "Profile";
+"Notifications" = "Notifications";
+
+//Registration Screens
+"Sign up" = "Sign up";
+"Login" = "Login";
+
+
+//FAQ
+"Which universities are participating?" = "Which universities are participating?";
+"Is there a registration fee?" = "Is there a registration fee?";
+"How can I interact with university representatives?" = "How can I interact with university representatives?";
+"Are there informational sessions?" = "Are there informational sessions?";
+"A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses." = "A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses.";
+"Registration is free for all attendees, making it accessible to anyone interested in exploring educational opportunities." = "Registration is free for all attendees, making it accessible to anyone interested in exploring educational opportunities.";
+"You can chat live with representatives, schedule video calls, and explore virtual booths." = "You can chat live with representatives, schedule video calls, and explore virtual booths.";
+"Yes, we offer sessions on admissions, careers, and more. Check the schedule for details." = "Yes, we offer sessions on admissions, careers, and more. Check the schedule for details.";
+
+
+//popup
+"GreetUserLabel" = "Hi %@";
+"AboutPopLabelJoin" = "Your turn is here, Join now!";
+"PositionLabelJoin" = "Join in 59s or your queue will be shifted.";
+"AboutPopLabelApply" = "Thank you for applying";
+"PositionLabelApply" = "Your Position in queue";
+"JoinButtonLabel" = "Thank you";
+"WaitingLabel" = "The average session duration is 5 min. We will notify you as soon as it's your turn to participate.";
+
+
+//Event Screens
+"EventDescriptionText" = "Join us at the %@, a premier academic fair designed to connect students with top universities worldwide. Explore booths from leading institutions, discover exciting academic programs, and engage with university representatives. Whether you're exploring undergraduate or graduate opportunities, the %@ offers valuable insights and networking opportunities to kickstart your academic journey.";
+

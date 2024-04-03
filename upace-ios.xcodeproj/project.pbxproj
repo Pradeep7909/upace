@@ -28,6 +28,7 @@
 		AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */; };
 		AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */; };
 		AEC2D0512B98F67600B2CEA0 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */; };
+		AEDA83E22BBD216900A9E75D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEDA83E42BBD216900A9E75D /* Localizable.strings */; };
 		AEDCB4602BA1D7B2007E0EA0 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */; };
 		AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241B2B999E31007B0D37 /* SessionManager.swift */; };
 		AEE5241E2B999EC5007B0D37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241D2B999EC5007B0D37 /* Model.swift */; };
@@ -87,6 +88,10 @@
 		AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfieldView.swift; sourceTree = "<group>"; };
 		AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextfieldView.xib; sourceTree = "<group>"; };
 		AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		AEDA83E32BBD216900A9E75D /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AEDA83E82BBD275000A9E75D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AEDA83EB2BBD317500A9E75D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AEDA83EC2BBD318200A9E75D /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
 		AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
 		AEE5241B2B999E31007B0D37 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		AEE5241D2B999EC5007B0D37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -259,6 +264,7 @@
 			children = (
 				AEE8691D2B98647B00549A94 /* Nunito-Font.ttf */,
 				AE0540652BB69192003802A6 /* call.mp3 */,
+				AEDA83E42BBD216900A9E75D /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
 			);
 			mainGroup = AEE868FA2B98526D00549A94;
 			productRefGroup = AEE869042B98526D00549A94 /* Products */;
@@ -383,6 +390,7 @@
 				AEE8692F2B989AB200549A94 /* CommonTopView.xib in Resources */,
 				AE0540662BB69192003802A6 /* call.mp3 in Resources */,
 				AEE869132B98526F00549A94 /* LaunchScreen.storyboard in Resources */,
+				AEDA83E22BBD216900A9E75D /* Localizable.strings in Resources */,
 				AEE869102B98526F00549A94 /* Assets.xcassets in Resources */,
 				AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */,
 				AEE8690E2B98526D00549A94 /* Main.storyboard in Resources */,
@@ -477,10 +485,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		AEDA83E42BBD216900A9E75D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEDA83E32BBD216900A9E75D /* hi */,
+				AEDA83E82BBD275000A9E75D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AEE8690C2B98526D00549A94 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AEE8690D2B98526D00549A94 /* Base */,
+				AEDA83EB2BBD317500A9E75D /* en */,
+				AEDA83EC2BBD318200A9E75D /* hi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -501,6 +520,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -564,6 +584,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

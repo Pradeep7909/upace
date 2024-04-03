@@ -1,0 +1,53 @@
+/* 
+  Localizable.strings
+  upace-ios
+
+  Created by Qualwebs on 03/04/24.
+  
+*/
+
+
+//Side Menu Screen
+"Profile information" = "प्रोफाइल जानकारी";
+"Application profile" = "एप्लिकेशन प्रोफ़ाइल";
+"Refer & Earn" = "रेफर और कमाएं";
+"Change Theme" = "थीम बदलें";
+"Change Language" = "भाषा बदलें";
+"Logout" = "लॉगआउट";
+
+//Titles
+"Features" = "विशेषताएँ";
+"Universities" = "विश्वविद्यालय";
+"Courses" = "कोर्सेज़";
+"Profile" = "प्रोफ़ाइल";
+"Notifications" = "सूचनाएं";
+
+//Registration Screens
+"Sign up" = "साइन अप";
+"Login" = "लॉग इन";
+
+
+//FAQ
+"Which universities are participating?" = "कौन कौन से विश्वविद्यालय भाग ले रहे हैं?";
+"Is there a registration fee?" = "क्या पंजीकरण शुल्क है?";
+"How can I interact with university representatives?" = "मैं विश्वविद्यालय प्रतिनिधियों से कैसे बात कर सकता हूँ?";
+"Are there informational sessions?" = "क्या सूचना सत्र हैं?";
+"A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses." = "पूरी दुनिया से विभिन्न विश्वविद्यालय होंगे, जो विभिन्न शैक्षणिक कार्यक्रम और अपने कैम्पस के अंदरदुनिया के दृश्यों की पेशेगी.";
+"Registration is free for all attendees, making it accessible to anyone interested in exploring educational opportunities." = "सभी प्रस्तुतकर्ताओं के लिए पंजीकरण मुफ्त है, जो शैक्षिक अवसरों का अन्वेषण करने में रुचि रखते हैं, उनके लिए सुलभ बना देता है.";
+"You can chat live with representatives, schedule video calls, and explore virtual booths." = "आप प्रतिनिधियों के साथ लाइव चैट कर सकते हैं, वीडियो कॉल की अनुसूची बना सकते हैं, और आवारा बूथों का अन्वेषण कर सकते हैं.";
+"Yes, we offer sessions on admissions, careers, and more. Check the schedule for details." = "हां, हम प्रवेश, करियर और अधिक पर सत्र प्रदान करते हैं। विवरण के लिए अनुसूची की जाँच करें।";
+
+
+//popup
+"GreetUserLabel" = "नमस्ते %@";
+"AboutPopLabelJoin" = "आपकी बारी आ गई है, अभी जुड़ें!";
+"PositionLabelJoin" = "59 सेकंडों में जुड़ें या फिर आपकी कतार को हटा दिया जाएगा।";
+"AboutPopLabelApply" = "आवेदन करने के लिए धन्यवाद";
+"PositionLabelApply" = "आपकी कतार में स्थिति";
+"JoinButtonLabel" = "धन्यवाद";
+"WaitingLabel" = "औसत सत्र अवधि 5 मिनट है। हम आपको जैसे ही आपकी बारी आती है, सूचित करेंगे।";
+
+
+//event scrrens
+"EventDescriptionText" = "हमारे साथ %@ में शामिल हों, एक प्रमुख शैक्षिक न्यायाधीश जो छात्रों को विश्वभर के शीर्ष विश्वविद्यालयों से जोड़ने के लिए डिज़ाइन किया गया है। अग्रणी संस्थानों के बूथ खोजें, रोमांचक शैक्षिक कार्यक्रमों की खोज करें, और विश्वविद्यालय प्रतिनिधियों के साथ जुड़ें। चाहे आप स्नातक या स्नातकोत्तर अवसरों की खोज कर रहे हों, %@ मूल्यवान अंदाज और नेटवर्किंग अवसर प्रदान करता है जो आपकी शैक्षिक यात्रा को शुरू करने के लिए।";
+

@@ -13,6 +13,8 @@ class NotificationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        commonTopView.titleText = NSLocalizedString("Notifications", comment: "")
         commonTopView.leftButton = {
             self.navigationController?.popViewController(animated: true)
         }

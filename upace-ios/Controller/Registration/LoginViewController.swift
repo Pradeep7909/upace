@@ -77,7 +77,7 @@ class LoginViewController: UIViewController {
     
     //MARK: Fucntions
     private func intitializeView(){
-        
+        commonTopView.titleText = NSLocalizedString("Login", comment: "")
     }
     
     func checkValidation() -> Bool{

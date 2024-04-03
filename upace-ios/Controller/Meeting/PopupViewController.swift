@@ -45,7 +45,7 @@ class PopupViewController: UIViewController {
     }
     
     
- 
+    
     
     //MARK: IBActions
     @IBAction func joinButtonAction(_ sender: UIButton) {
@@ -71,11 +71,14 @@ class PopupViewController: UIViewController {
     
     
     private func initializeView(){
-        greetUserLabel.text = "Hii \(Singleton.shared.currentUser?.name ?? "")"
+        // Localized greeting text
+        let greetingText = NSLocalizedString("GreetUserLabel", comment: "")
+        greetUserLabel.text = String(format: greetingText, Singleton.shared.currentUser?.name ?? "")
+        
         if popupType == .join{
             self.meetingData = FirebaseManager.shared.currentMeeting
-            aboutPopLabel.text = "Your turn is here, Join now!"
-            positionLabel.text = "Join in 59s or your queue will be shifted."
+            aboutPopLabel.text = NSLocalizedString("AboutPopLabelJoin", comment: "")
+            positionLabel.text = NSLocalizedString("PositionLabelJoin", comment: "")
             universityNameLabel.text = meetingData?.data?.university_name
             queueNumberLabel.isHidden = true
             updateDynamicText()
@@ -83,12 +86,15 @@ class PopupViewController: UIViewController {
             playJoinSoundAndVibrate()
             
         }else{
-            aboutPopLabel.text = "Thank you for applying"
-            positionLabel.text = "Your Positon in queue"
+            
+            
+            
+            aboutPopLabel.text = NSLocalizedString("AboutPopLabelApply", comment: "")
+            positionLabel.text = NSLocalizedString("PositionLabelApply", comment: "")
             queueNumberLabel.text = "\(tokenNumber)"
             universityNameLabel.isHidden = true
-            joinButtonLabel.text = "Thank you"
-            waitingLabel.text = "The average session duration is 5 min. We will notify you as soon as its your turn to participate."
+            joinButtonLabel.text = NSLocalizedString("JoinButtonLabel", comment: "")
+            waitingLabel.text = NSLocalizedString("WaitingLabel", comment: "")
             imageView.isHidden = true
             centerColorView.backgroundColor = .systemOrange
             notInterestedView.isHidden = true

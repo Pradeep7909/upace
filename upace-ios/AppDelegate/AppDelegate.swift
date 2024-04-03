@@ -19,11 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //AMAZON CHIME SDK
         let credentials = AWSStaticCredentialsProvider(accessKey: "AKIAUATGMLVC57FVIZNU", secretKey: "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")
         let configuration = AWSServiceConfiguration(region: AWSRegionType.APSouth1 , credentialsProvider: credentials)
         AWSServiceManager.default().defaultServiceConfiguration = configuration
         
         FirebaseApp.configure()
+        
+        //LOCALIZATION
+        if let lang = UserDefaults.standard.string(forKey: "selectedLanguage"){
+            Singleton.shared.changeAppLanguage(to: lang)
+        }
+       
         
         return true
     }

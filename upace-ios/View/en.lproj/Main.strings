@@ -1,0 +1,453 @@
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "0D8-f9-QAK"; */
+"0D8-f9-QAK.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0D8-f9-QAK"; */
+"0D8-f9-QAK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Receive updates from Upace and services."; ObjectID = "0bB-NB-EgW"; */
+"0bB-NB-EgW.text" = "Receive updates from Upace and services.";
+
+/* Class = "UILabel"; text = "Join Now"; ObjectID = "1Ef-cy-b9I"; */
+"1Ef-cy-b9I.text" = "Join Now";
+
+/* Class = "UIButton"; configuration.title = "camera"; ObjectID = "1Qs-kh-hHD"; */
+"1Qs-kh-hHD.configuration.title" = "camera";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1Qs-kh-hHD"; */
+"1Qs-kh-hHD.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "1qe-HK-aVZ"; */
+"1qe-HK-aVZ.text" = "Description";
+
+/* Class = "UILabel"; text = "Welcome to Upace"; ObjectID = "3bY-3v-k4U"; */
+"3bY-3v-k4U.text" = "Welcome to Upace";
+
+/* Class = "UILabel"; text = "Booth Name"; ObjectID = "3rk-m0-ZTj"; */
+"3rk-m0-ZTj.text" = "Booth Name";
+
+/* Class = "UILabel"; text = "Stay Connected"; ObjectID = "4Nh-VB-v9E"; */
+"4Nh-VB-v9E.text" = "Stay Connected";
+
+/* Class = "UILabel"; text = "Event Name"; ObjectID = "4aC-wS-36c"; */
+"4aC-wS-36c.text" = "Event Name";
+
+/* Class = "UILabel"; text = "University counsellor is waiting for you to join session."; ObjectID = "60w-Ps-7uG"; */
+"60w-Ps-7uG.text" = "University counsellor is waiting for you to join session.";
+
+/* Class = "UIButton"; configuration.title = "speakerButton"; ObjectID = "6ie-86-HEU"; */
+"6ie-86-HEU.configuration.title" = "speakerButton";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6ie-86-HEU"; */
+"6ie-86-HEU.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Profile"; ObjectID = "82H-32-SRA"; */
+"82H-32-SRA.text" = "Profile";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "8Qd-Qf-KGB"; */
+"8Qd-Qf-KGB.text" = "1";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "8Qh-as-EwJ"; */
+"8Qh-as-EwJ.text" = "Name";
+
+/* Class = "UILabel"; text = "Booths"; ObjectID = "8XI-Zc-cXH"; */
+"8XI-Zc-cXH.text" = "Booths";
+
+/* Class = "UILabel"; text = "Fair Mode"; ObjectID = "8gT-X0-qBH"; */
+"8gT-X0-qBH.text" = "Fair Mode";
+
+/* Class = "UILabel"; text = "Booths"; ObjectID = "9I1-kj-zeV"; */
+"9I1-kj-zeV.text" = "Booths";
+
+/* Class = "UILabel"; text = "Welcome back"; ObjectID = "9aq-eo-5Fe"; */
+"9aq-eo-5Fe.text" = "Welcome back";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "AOs-xH-7Zt"; */
+"AOs-xH-7Zt.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "AOs-xH-7Zt"; */
+"AOs-xH-7Zt.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Time and Date"; ObjectID = "ArF-Lk-T5y"; */
+"ArF-Lk-T5y.text" = "Time and Date";
+
+/* Class = "UILabel"; text = "Not interested anymore"; ObjectID = "Au1-DS-Z4A"; */
+"Au1-DS-Z4A.text" = "Not interested anymore";
+
+/* Class = "UILabel"; text = "Updated Fec 12, 2024"; ObjectID = "AvD-az-0Zs"; */
+"AvD-az-0Zs.text" = "Updated Fec 12, 2024";
+
+/* Class = "UILabel"; text = "Waiting(59)"; ObjectID = "B0Y-1N-gqm"; */
+"B0Y-1N-gqm.text" = "Waiting(59)";
+
+/* Class = "UILabel"; text = "Let's plan your education journey!"; ObjectID = "BmH-B7-KPH"; */
+"BmH-B7-KPH.text" = "Let's plan your education journey!";
+
+/* Class = "UILabel"; text = "Join us at the [Event Name], a premier academic fair designed to connect students with top universities worldwide. Explore booths from leading institutions, discover exciting academic programs, and engage with university representatives. Whether you're exploring undergraduate or graduate opportunities, the [Event Name] offers valuable insights and networking opportunities to kickstart your academic journey."; ObjectID = "C2t-Fk-pPn"; */
+"C2t-Fk-pPn.text" = "Join us at the [Event Name], a premier academic fair designed to connect students with top universities worldwide. Explore booths from leading institutions, discover exciting academic programs, and engage with university representatives. Whether you're exploring undergraduate or graduate opportunities, the [Event Name] offers valuable insights and networking opportunities to kickstart your academic journey.";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "C4l-tf-ce7"; */
+"C4l-tf-ce7.text" = "Name";
+
+/* Class = "UILabel"; text = "Universities"; ObjectID = "CR5-qw-ubp"; */
+"CR5-qw-ubp.text" = "Universities";
+
+/* Class = "UILabel"; text = "Log in"; ObjectID = "CSu-Bp-mSV"; */
+"CSu-Bp-mSV.text" = "Log in";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "Cf8-aJ-zq5"; */
+"Cf8-aJ-zq5.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Cf8-aJ-zq5"; */
+"Cf8-aJ-zq5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "Dov-lr-Erc"; */
+"Dov-lr-Erc.text" = "Login";
+
+/* Class = "UILabel"; text = "Already have an account?"; ObjectID = "Duk-Vc-Esx"; */
+"Duk-Vc-Esx.text" = "Already have an account?";
+
+/* Class = "UILabel"; text = "10:00AM - 11:50PM"; ObjectID = "EiX-Wm-s3N"; */
+"EiX-Wm-s3N.text" = "10:00AM - 11:50PM";
+
+/* Class = "UILabel"; text = "Which universities are participating?"; ObjectID = "FDI-PE-JOc"; */
+"FDI-PE-JOc.text" = "Which universities are participating?";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "FTY-d2-fui"; */
+"FTY-d2-fui.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "FTY-d2-fui"; */
+"FTY-d2-fui.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Flj-mB-e6Y"; */
+"Flj-mB-e6Y.text" = "1";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "G7J-Pb-foq"; */
+"G7J-Pb-foq.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "G7J-Pb-foq"; */
+"G7J-Pb-foq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Join in 50s or your queue will be shifted."; ObjectID = "GDG-G9-7ed"; */
+"GDG-G9-7ed.text" = "Join in 50s or your queue will be shifted.";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "GVW-wj-tEr"; */
+"GVW-wj-tEr.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "GVW-wj-tEr"; */
+"GVW-wj-tEr.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "camera"; ObjectID = "Gi5-fA-1tu"; */
+"Gi5-fA-1tu.configuration.title" = "camera";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Gi5-fA-1tu"; */
+"Gi5-fA-1tu.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Start your journey with Upace and plan your journey!"; ObjectID = "JDj-ic-jq7"; */
+"JDj-ic-jq7.text" = "Start your journey with Upace and plan your journey!";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "JJo-vT-88c"; */
+"JJo-vT-88c.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JJo-vT-88c"; */
+"JJo-vT-88c.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Can you get into Universities without GRE/GMAT?"; ObjectID = "JYi-I1-JUb"; */
+"JYi-I1-JUb.text" = "Can you get into Universities without GRE/GMAT?";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "Kz3-bR-woZ"; */
+"Kz3-bR-woZ.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Kz3-bR-woZ"; */
+"Kz3-bR-woZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Courses"; ObjectID = "L48-TV-lI9"; */
+"L48-TV-lI9.text" = "Courses";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "L9o-QO-dlx"; */
+"L9o-QO-dlx.text" = "Label";
+
+/* Class = "UILabel"; text = "student detail"; ObjectID = "LAY-rj-4OH"; */
+"LAY-rj-4OH.text" = "student detail";
+
+/* Class = "UILabel"; text = "Event Name"; ObjectID = "LIH-VO-LQx"; */
+"LIH-VO-LQx.text" = "Event Name";
+
+/* Class = "UIButton"; configuration.title = "camera"; ObjectID = "LUL-l5-3kQ"; */
+"LUL-l5-3kQ.configuration.title" = "camera";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LUL-l5-3kQ"; */
+"LUL-l5-3kQ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "10:00AM - 11:50PM"; ObjectID = "Mfb-gO-1LQ"; */
+"Mfb-gO-1LQ.text" = "10:00AM - 11:50PM";
+
+/* Class = "UILabel"; text = "Online Fair"; ObjectID = "Na1-4z-AVx"; */
+"Na1-4z-AVx.text" = "Online Fair";
+
+/* Class = "UILabel"; text = "Overview"; ObjectID = "NpY-IV-pce"; */
+"NpY-IV-pce.text" = "Overview";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "OTv-xQ-cNc"; */
+"OTv-xQ-cNc.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OTv-xQ-cNc"; */
+"OTv-xQ-cNc.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Not defined"; ObjectID = "Ovt-GX-fL8"; */
+"Ovt-GX-fL8.text" = "Not defined";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "PQH-fk-wRF"; */
+"PQH-fk-wRF.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PQH-fk-wRF"; */
+"PQH-fk-wRF.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "PSF-Fh-5mN"; */
+"PSF-Fh-5mN.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PSF-Fh-5mN"; */
+"PSF-Fh-5mN.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "QWr-DD-yt6"; */
+"QWr-DD-yt6.text" = "OR";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "Qlf-6r-zrA"; */
+"Qlf-6r-zrA.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qlf-6r-zrA"; */
+"Qlf-6r-zrA.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "RME-a5-ntZ"; */
+"RME-a5-ntZ.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "RME-a5-ntZ"; */
+"RME-a5-ntZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ROd-ud-Cxj"; */
+"ROd-ud-Cxj.text" = "Label";
+
+/* Class = "UILabel"; text = "March 08, 2024"; ObjectID = "Rii-sS-Vet"; */
+"Rii-sS-Vet.text" = "March 08, 2024";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "S9b-UV-Kb3"; */
+"S9b-UV-Kb3.text" = "Home";
+
+/* Class = "UILabel"; text = "Subscribe now"; ObjectID = "Sw5-qk-xkY"; */
+"Sw5-qk-xkY.text" = "Subscribe now";
+
+/* Class = "UILabel"; text = "🌟🎓Unlock Your Educational Dreams Best International Educational Fair! 🎓🌟 "; ObjectID = "Tnu-Ph-Enn"; */
+"Tnu-Ph-Enn.text" = "🌟🎓Unlock Your Educational Dreams Best International Educational Fair! 🎓🌟 ";
+
+/* Class = "UILabel"; text = "As we bring universities together to coordinate a collective event."; ObjectID = "VES-eb-w2Z"; */
+"VES-eb-w2Z.text" = "As we bring universities together to coordinate a collective event.";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "VUN-nw-KF0"; */
+"VUN-nw-KF0.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VUN-nw-KF0"; */
+"VUN-nw-KF0.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Frequently Asked Questions"; ObjectID = "VgX-1k-Qk8"; */
+"VgX-1k-Qk8.text" = "Frequently Asked Questions";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "WmE-Ke-mx5"; */
+"WmE-Ke-mx5.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WmE-Ke-mx5"; */
+"WmE-Ke-mx5.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "XAj-My-83C"; */
+"XAj-My-83C.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "XAj-My-83C"; */
+"XAj-My-83C.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "Y4g-yE-VxZ"; */
+"Y4g-yE-VxZ.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Y4g-yE-VxZ"; */
+"Y4g-yE-VxZ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "March 08, 2024"; ObjectID = "YKc-P7-p0w"; */
+"YKc-P7-p0w.text" = "March 08, 2024";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "Yzm-tp-9oT"; */
+"Yzm-tp-9oT.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Yzm-tp-9oT"; */
+"Yzm-tp-9oT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Students in queue"; ObjectID = "aH1-JQ-r5i"; */
+"aH1-JQ-r5i.text" = "Students in queue";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "aXG-yP-RFO"; */
+"aXG-yP-RFO.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "aXG-yP-RFO"; */
+"aXG-yP-RFO.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Recent Articles"; ObjectID = "aZ7-9C-Lhu"; */
+"aZ7-9C-Lhu.text" = "Recent Articles";
+
+/* Class = "UILabel"; text = "Your position in the queue."; ObjectID = "bjt-xs-yF1"; */
+"bjt-xs-yF1.text" = "Your position in the queue.";
+
+/* Class = "UILabel"; text = "View all"; ObjectID = "bjz-G5-cer"; */
+"bjz-G5-cer.text" = "View all";
+
+/* Class = "UILabel"; text = "FAQs"; ObjectID = "c3h-ed-cpw"; */
+"c3h-ed-cpw.text" = "FAQs";
+
+/* Class = "UILabel"; text = "🚀Get ready to embark on a thrilling  educational journey like never before!🚀"; ObjectID = "el7-D2-I8m"; */
+"el7-D2-I8m.text" = "🚀Get ready to embark on a thrilling  educational journey like never before!🚀";
+
+/* Class = "UILabel"; text = "Features"; ObjectID = "eow-24-sol"; */
+"eow-24-sol.text" = "Features";
+
+/* Class = "UILabel"; text = "Profile Information"; ObjectID = "fLn-aS-Rgn"; */
+"fLn-aS-Rgn.text" = "Profile Information";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "fO2-DJ-Kz5"; */
+"fO2-DJ-Kz5.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fO2-DJ-Kz5"; */
+"fO2-DJ-Kz5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "As we bring universities together to coordinate a collective event."; ObjectID = "fdI-47-DYu"; */
+"fdI-47-DYu.text" = "As we bring universities together to coordinate a collective event.";
+
+/* Class = "UILabel"; text = "Personal Information"; ObjectID = "g74-31-lGY"; */
+"g74-31-lGY.text" = "Personal Information";
+
+/* Class = "UILabel"; text = "Don't have an account? "; ObjectID = "grZ-0p-vcI"; */
+"grZ-0p-vcI.text" = "Don't have an account? ";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "h3g-kg-Jgx"; */
+"h3g-kg-Jgx.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "h3g-kg-Jgx"; */
+"h3g-kg-Jgx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Completed"; ObjectID = "hBG-h4-OVF"; */
+"hBG-h4-OVF.text" = "Completed";
+
+/* Class = "UILabel"; text = "Create my account"; ObjectID = "hLT-uR-Nm5"; */
+"hLT-uR-Nm5.text" = "Create my account";
+
+/* Class = "UILabel"; text = "No student found!"; ObjectID = "hOm-kv-fLp"; */
+"hOm-kv-fLp.text" = "No student found!";
+
+/* Class = "UILabel"; text = "Overview"; ObjectID = "hag-6G-hLJ"; */
+"hag-6G-hLJ.text" = "Overview";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "hog-Ab-ii2"; */
+"hog-Ab-ii2.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hog-Ab-ii2"; */
+"hog-Ab-ii2.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "city"; ObjectID = "hxT-SB-uuQ"; */
+"hxT-SB-uuQ.text" = "city";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "hxZ-fb-lTN"; */
+"hxZ-fb-lTN.text" = "OR";
+
+/* Class = "UILabel"; text = "Online Fair"; ObjectID = "jTX-tT-XTh"; */
+"jTX-tT-XTh.text" = "Online Fair";
+
+/* Class = "UILabel"; text = "🌟🎓Hosted BY Study Metro🎓🌟"; ObjectID = "jzz-d3-DJS"; */
+"jzz-d3-DJS.text" = "🌟🎓Hosted BY Study Metro🎓🌟";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "k6l-7J-aeM"; */
+"k6l-7J-aeM.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "k6l-7J-aeM"; */
+"k6l-7J-aeM.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "university name"; ObjectID = "kL6-BC-9A6"; */
+"kL6-BC-9A6.text" = "university name";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "kVm-Eo-69G"; */
+"kVm-Eo-69G.text" = "Sign up";
+
+/* Class = "UILabel"; text = "Your turn is here, Join now!"; ObjectID = "lRr-NB-SIM"; */
+"lRr-NB-SIM.text" = "Your turn is here, Join now!";
+
+/* Class = "UILabel"; text = "A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses."; ObjectID = "lVX-sQ-5XP"; */
+"lVX-sQ-5XP.text" = "A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses.";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "ly2-o1-nDJ"; */
+"ly2-o1-nDJ.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ly2-o1-nDJ"; */
+"ly2-o1-nDJ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Booth Name"; ObjectID = "nGr-dV-5JJ"; */
+"nGr-dV-5JJ.text" = "Booth Name";
+
+/* Class = "UILabel"; text = "Hii User"; ObjectID = "noi-3R-CM8"; */
+"noi-3R-CM8.text" = "Hii User";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "oYn-Rx-OGf"; */
+"oYn-Rx-OGf.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oYn-Rx-OGf"; */
+"oYn-Rx-OGf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Continue with Google"; ObjectID = "oer-LW-Ccj"; */
+"oer-LW-Ccj.text" = "Continue with Google";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "ofQ-ob-ggA"; */
+"ofQ-ob-ggA.text" = "Email";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "pVn-yf-LSe"; */
+"pVn-yf-LSe.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pVn-yf-LSe"; */
+"pVn-yf-LSe.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Join Now"; ObjectID = "ph9-N9-Zgs"; */
+"ph9-N9-Zgs.text" = "Join Now";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pu3-Ls-nuo"; */
+"pu3-Ls-nuo.text" = "Label";
+
+/* Class = "UILabel"; text = "Forget password?"; ObjectID = "rXY-E2-H9l"; */
+"rXY-E2-H9l.text" = "Forget password?";
+
+/* Class = "UILabel"; text = "Continue with Google"; ObjectID = "sBG-dQ-K75"; */
+"sBG-dQ-K75.text" = "Continue with Google";
+
+/* Class = "UILabel"; text = "Phone Number"; ObjectID = "uCd-ib-kDP"; */
+"uCd-ib-kDP.text" = "Phone Number";
+
+/* Class = "UIButton"; configuration.title = "  "; ObjectID = "vfq-HD-i8Y"; */
+"vfq-HD-i8Y.configuration.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "vfq-HD-i8Y"; */
+"vfq-HD-i8Y.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "vnz-CS-PTE"; */
+"vnz-CS-PTE.text" = "Gender";
+
+/* Class = "UIButton"; configuration.title = " "; ObjectID = "w1j-yO-lql"; */
+"w1j-yO-lql.configuration.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "w1j-yO-lql"; */
+"w1j-yO-lql.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "FAQs"; ObjectID = "wGu-Ih-8gu"; */
+"wGu-Ih-8gu.text" = "FAQs";
+
+/* Class = "UILabel"; text = "No Booth Found!"; ObjectID = "wHH-1m-zUN"; */
+"wHH-1m-zUN.text" = "No Booth Found!";
+
+/* Class = "UILabel"; text = "No data found!"; ObjectID = "xi8-2G-XUT"; */
+"xi8-2G-XUT.text" = "No data found!";
+
+/* Class = "UIButton"; configuration.title = "camera"; ObjectID = "zCd-2A-ea7"; */
+"zCd-2A-ea7.configuration.title" = "camera";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zCd-2A-ea7"; */
+"zCd-2A-ea7.normalTitle" = "Button";

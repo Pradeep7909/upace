@@ -19,7 +19,7 @@ class OverviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         initializeView()
     }
@@ -28,9 +28,10 @@ class OverviewViewController: UIViewController {
         eventDetail = Singleton.shared.selectedEvent!
         self.eventDateLabel.text = formatDate(self.eventDetail?.event_date ?? "")
         self.eventTimeLabel.text = (formatTime(self.eventDetail?.event_start_time ?? "") ?? "") + " - " + (formatTime(self.eventDetail?.event_end_time ?? "") ?? "")
-        eventDescriptionLabel.text = "Join us at the \(eventDetail?.title ?? "Event"), a premier academic fair designed to connect students with top universities worldwide. Explore booths from leading institutions, discover exciting academic programs, and engage with university representatives. Whether you're exploring undergraduate or graduate opportunities, the \(eventDetail?.title ?? "Event") offers valuable insights and networking opportunities to kickstart your academic journey."
+        let eventTitle = eventDetail?.title ?? ""
+        let eventDescriptionText = NSLocalizedString("EventDescriptionText", comment: "")
+        eventDescriptionLabel.text = String(format: eventDescriptionText, eventTitle, eventTitle)
         
     }
     
-
 }

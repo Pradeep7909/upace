@@ -9,13 +9,20 @@ import UIKit
 
 class FAQViewController: UIViewController {
 
-    let faqList : [FAQ] = [
-    
-        FAQ(question: "Which universities are participating?", answer: "A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses."),
-        FAQ(question: "Is there a registration fee?", answer: "Registration is free for all attendees, making it accessible to anyone interested in exploring educational opportunities."),
-        FAQ(question: "How can I interact with university representatives?", answer: "You can chat live with representatives, schedule video calls, and explore virtual booths."),
-        FAQ(question: "Are there informational sessions?", answer: "Yes, we offer sessions on admissions, careers, and more. Check the schedule for details.")
+    let faqList: [FAQ] = [
+        FAQ(question: NSLocalizedString("Which universities are participating?", comment: ""),
+            answer: NSLocalizedString("A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses.", comment: "")),
+        
+        FAQ(question: NSLocalizedString("Is there a registration fee?", comment: ""),
+            answer: NSLocalizedString("Registration is free for all attendees, making it accessible to anyone interested in exploring educational opportunities.", comment: "")),
+        
+        FAQ(question: NSLocalizedString("How can I interact with university representatives?", comment: ""),
+            answer: NSLocalizedString("You can chat live with representatives, schedule video calls, and explore virtual booths.", comment: "")),
+        
+        FAQ(question: NSLocalizedString("Are there informational sessions?", comment: ""),
+            answer: NSLocalizedString("Yes, we offer sessions on admissions, careers, and more. Check the schedule for details.", comment: ""))
     ]
+
     
     var visibleFAQCell: FAQCell?
     

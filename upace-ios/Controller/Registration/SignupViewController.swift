@@ -22,12 +22,11 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: CustomTextfieldView!
     
     
-    
-    
     //MARK: View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         LOG("\(type(of: self)) viewDidLoad")
+        commonTopView.titleText = NSLocalizedString("Signup", comment: "")
         commonTopView.leftButton = {
             self.navigationController?.popViewController(animated: true)
         }
