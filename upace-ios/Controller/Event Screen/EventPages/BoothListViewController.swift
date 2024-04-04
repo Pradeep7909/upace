@@ -18,6 +18,7 @@ class BoothListViewController: UIViewController {
     
     static var delegate : ContainerViewHeightDelegate?
     private var boothData : BoothResponse?
+    private var realmBoothData : RealmBoothResponse?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noBoothLabel: UILabel!
@@ -37,18 +38,23 @@ class BoothListViewController: UIViewController {
     //MARK: Functions
     
     private func initializeView(){
-        //these is used for fetching booth data if it's already fetched one time for better user expereience
-        if Singleton.shared.savedBoothList != nil{
-            self.boothData = Singleton.shared.savedBoothList
-            self.noBoothLabel.isHidden = self.boothData?.data.count ?? 0 > 0
-            self.tableView.reloadData()
-            let totalHeight = calculateTableViewHeight(for: self.tableView)
-            BoothListViewController.delegate?.setContainerHeight(height: totalHeight)
-        }
+        
     }
     
     
     func getBooths(){
+        
+        //show old data from realm database for better user experience
+        RealmManager.shared.fetchCachedBooth(){ response in
+            if let cachedResponse = response {
+                if  cachedResponse.data[0].event_id == Singleton.shared.selectedEvent?.id{
+                    self.realmBoothData = cachedResponse
+                    self.handleBoothResponse()
+                }
+            }
+        }
+        
+        
         SessionManager.shared.methodForApiCalling(url: U_BASE + U_EVENT + U_BOOTH_UNIVERSITIES + (Singleton.shared.selectedEvent?.id ?? "") , method: .get, parameter: nil, objectClass: BoothResponse.self, requestCode: U_BOOTH_UNIVERSITIES) { response in
             guard let response = response else{
                 LOG("Error in getting response")
@@ -61,6 +67,7 @@ class BoothListViewController: UIViewController {
     
     
     func getQueueDetail(){
+        
         let url = U_BASE + U_QUEUE + "?event_id=\(Singleton.shared.selectedEvent?.id ?? "")" + "&user_id=\(Singleton.shared.currentUser?.id ?? "")"
         SessionManager.shared.methodForApiCalling(url: url, method: .get, parameter: nil, objectClass: QueueDetailResponse.self, requestCode: U_QUEUE) { response in
             guard let response = response else{
@@ -69,6 +76,8 @@ class BoothListViewController: UIViewController {
             }
             
             let queueData : QueueDetailResponse = response
+            
+            
             
             // Iterate through boothData using indices
             for i in 0..<(self.boothData?.data.count ?? 0) {
@@ -83,13 +92,19 @@ class BoothListViewController: UIViewController {
                 }
             }
             
-            self.noBoothLabel.isHidden = self.boothData?.data.count ?? 0 > 0
-            self.tableView.reloadData()
-            let totalHeight = calculateTableViewHeight(for: self.tableView)
-            print("Total height of table view: \(totalHeight)")
-            Singleton.shared.savedBoothList = self.boothData
-            BoothListViewController.delegate?.setContainerHeight(height: totalHeight)
+            RealmManager.shared.saveBoothData(self.boothData!){ data in
+                self.realmBoothData = data
+                self.handleBoothResponse()
+            }
         }
+    }
+    
+    func handleBoothResponse(){
+        self.noBoothLabel.isHidden = self.realmBoothData?.data.count ?? 0 > 0
+        self.tableView.reloadData()
+        let totalHeight = calculateTableViewHeight(for: self.tableView)
+        print("Total height of table view: \(totalHeight)")
+        BoothListViewController.delegate?.setContainerHeight(height: totalHeight)
     }
 }
 
@@ -102,7 +117,7 @@ extension BoothListViewController : FirebaseManagerDelegate{
 //MARK: Table View
 extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        boothData?.data.count ?? 0
+        realmBoothData?.data.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -110,15 +125,15 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
         
         // here first check is already in queue
         
-        let booth = boothData?.data[indexPath.row]
+        let booth = realmBoothData?.data[indexPath.row]
         cell.queueView.isHidden = true
         cell.completedView.isHidden = true
         cell.joinButtonView.isHidden = false
         
-        cell.boothName.text = booth?.University.name
-        cell.boothCIty.text = (booth?.University.city ?? "") + ", " + (booth?.University.country ?? "")
+        cell.boothName.text = booth?.University?.name
+        cell.boothCIty.text = (booth?.University?.city ?? "") + ", " + (booth?.University?.country ?? "")
         
-        if let encodedUrlString = booth?.University.bannerImage?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+        if let encodedUrlString = booth?.University?.bannerImage.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
            let url = URL(string: encodedUrlString) {
             cell.boothBannerImage.sd_setImage(with: url, placeholderImage: UIImage(named: "booth"))
         } else {
@@ -142,7 +157,7 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
             if booth?.status == "joined"{
                 
                 
-                let meetingJoinData : MeetingJoinData = MeetingJoinData(user: Singleton.shared.currentUser, event_id: booth?.event_id, university_id: booth?.university_external_id, counsellor_id: booth?.counsellor_id , queue_id: booth?.queue_id , university_name: booth?.University.name)
+                let meetingJoinData : MeetingJoinData = MeetingJoinData(user: Singleton.shared.currentUser, event_id: booth?.event_id, university_id: booth?.university_external_id, counsellor_id: booth?.counsellor_id , queue_id: booth?.queue_id , university_name: booth?.University?.name)
                 
                 let meetingData : MeetingJoinResponse = MeetingJoinResponse(data: meetingJoinData, title: "join", user_external_id: Singleton.shared.currentUser?.user_external_id)
                 
@@ -150,7 +165,7 @@ extension BoothListViewController : UITableViewDelegate, UITableViewDataSource{
                 Singleton.shared.currentJoinMeeting = meetingData
                 // Move to the meeting screen after joining the request
                 NotificationCenter.default.post(name: .showMeetingViewController, object: nil)
-                    
+                
             }else{
                 param = [
                     "event_id" : booth?.event_id ?? "" ,

@@ -19,8 +19,11 @@ class SingleEventViewController: UIViewController{
     private var heightForStopPointofScrolling : CGFloat = 0
     private var currentIndex = 0
     private var minContainerViewHeight : CGFloat = 400
-    private var boothListHeight :  CGFloat = 0
-    
+    private static var boothListHeight: CGFloat = 0 {
+        didSet {
+            print("value set at \(boothListHeight)")
+        }
+    }
     
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventTagline: UILabel!
@@ -32,7 +35,6 @@ class SingleEventViewController: UIViewController{
     @IBOutlet weak var backButtonView: CustomView!
     @IBOutlet weak var backButtonImageview: UIImageView!
     @IBOutlet weak var eventBannerImageView: UIImageView!
-    @IBOutlet weak var eventLogoImageView: CustomImage!
     @IBOutlet weak var eventDescriptionView: UIView!
     @IBOutlet weak var mainScrollView: UIScrollView!
     
@@ -62,7 +64,7 @@ class SingleEventViewController: UIViewController{
         heightForStopPointofScrolling = eventBannerImageView.frame.size.height  + eventDescriptionView.frame.height - topView.frame.size.height
         let bottomSafeArea = view.safeAreaInsets.bottom
         minContainerViewHeight = view.frame.height - topView.frame.size.height - 40 - bottomSafeArea
-        containerHeightConstraint.constant = max (minContainerViewHeight, boothListHeight)
+        containerHeightConstraint.constant = max (minContainerViewHeight, SingleEventViewController.boothListHeight)
     
     }
     
@@ -107,7 +109,7 @@ class SingleEventViewController: UIViewController{
         tabLabelAtIndex2(index: currentIndex).font = UIFont(name: "Nunito-Medium", size: 16)
         tabLabelAtIndex2(index: nextIndex).font = UIFont(name: "Nunito-Bold", size: 16)
         
-        containerHeightConstraint.constant = nextIndex == 1 ? minContainerViewHeight : boothListHeight
+        containerHeightConstraint.constant = nextIndex == 1 ? minContainerViewHeight : SingleEventViewController.boothListHeight
         
         self.currentIndex = nextIndex
     }
@@ -138,7 +140,7 @@ class SingleEventViewController: UIViewController{
 extension SingleEventViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
    
-        if scrollView.contentOffset.y  > heightForStopPointofScrolling{
+        if scrollView.contentOffset.y  >= heightForStopPointofScrolling{
             staticTabView.isHidden = false
             
             self.topView.backgroundColor = .systemBackground
@@ -162,8 +164,8 @@ extension SingleEventViewController : UIScrollViewDelegate {
 
 extension SingleEventViewController : ContainerViewHeightDelegate {
     func setContainerHeight(height: CGFloat) {
-        boothListHeight = max (height + 50 , minContainerViewHeight)
-        containerHeightConstraint.constant = boothListHeight
+        SingleEventViewController.boothListHeight = max (height + 50 , minContainerViewHeight)
+        containerHeightConstraint.constant = SingleEventViewController.boothListHeight
         print("containerHeightConstraint.constant \(containerHeightConstraint.constant)")
     }
 }

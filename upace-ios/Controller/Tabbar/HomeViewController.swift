@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
-
+    
     private var eventDetail : EventResponse?
     
-
+    
     //MARK: IBOutlets
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var staticLabel: UILabel!
@@ -27,8 +28,10 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         LOG("\(type(of: self)) viewDidLoad")
         // Do any additional setup after loading the view.
+        print("Realm file path:", Realm.Configuration.defaultConfiguration.fileURL ?? "Not found")
         initializeView()
         getEvents()
+        
     }
     
     
@@ -47,10 +50,6 @@ class HomeViewController: UIViewController {
     
     @IBAction func viewAllArticlesButton(_ sender: Any) {
         
-        let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PopupViewController") as! PopupViewController
-        popupVC.modalPresentationStyle = .overFullScreen
-        popupVC.popupType = .send
-        present(popupVC, animated: false, completion: nil)
     }
     
     
@@ -63,25 +62,25 @@ class HomeViewController: UIViewController {
     
     func getEvents(){
         
+        RealmManager.shared.fetchCachedEvent { [weak self] response in
+            if let cachedResponse = response {
+                let isEventActive = RealmManager.shared.compareEventTime(cachedResponse: cachedResponse)
+                if isEventActive {
+                    self?.handleEventResponse(response: cachedResponse)
+                }
+            }
+        }
+
         // right now fetching on latest event if want all event then remove U_LATEST endpoint
-        SessionManager.shared.methodForApiCalling(url: U_BASE + U_EVENT /*+ U_LATEST*/ , method: .get, parameter: nil, objectClass: EventResponse.self, requestCode: U_EVENT) { response in
+        SessionManager.shared.methodForApiCalling(url: U_BASE + U_EVENT +  U_LATEST , method: .get, parameter: nil, objectClass: EventResponse.self, requestCode: U_EVENT) { response in
             guard let response = response else{
                 LOG("Error in getting response")
                 return
             }
-            if response.total == 0 {
-                return
-            }
-            self.eventDetail = response
-            self.eventTypeView.isHidden = false
-            self.eventTimeView.isHidden = false
             
-            self.eventButtonLabel.text = "Join now"
-            self.eventNameLabel.text = self.eventDetail?.data[0].title
-            self.staticLabel.text = self.eventDetail?.data[0].tag_line
-            self.eventDayLabel.text = formatDate(self.eventDetail?.data[0].event_date ?? "")
-            self.eventTimeLabel.text = (formatTime(self.eventDetail?.data[0].event_start_time ?? "") ?? "") + " - " + (formatTime(self.eventDetail?.data[0].event_end_time ?? "") ?? "")
-        
+            // Save fetched data into Realm using RealmManager
+            RealmManager.shared.saveEventData(response: response) { realmResponse in                self.handleEventResponse(response: realmResponse)
+            }
         }
     }
     
@@ -98,6 +97,31 @@ class HomeViewController: UIViewController {
             }
             ToastManager.shared.showToast(message: "Subscribed Successfully", type: .success)
         }
+    }
+    
+    func handleEventResponse(response: RealmEventResponse) {
+        if response.total == 0 {
+            return
+        }
+        
+        self.eventDetail = EventResponse(data: response.data.map { event in
+            Event(id: event.id,
+                  title: event.title,
+                  type: event.type,
+                  tag_line: event.tag_line,
+                  event_date: event.event_date,
+                  event_start_time: event.event_start_time,
+                  event_end_time: event.event_end_time)
+        }, total: response.total, totalPage: response.totalPage)
+        
+        // Update UI with the event details
+        self.eventTypeView.isHidden = false
+        self.eventTimeView.isHidden = false
+        self.eventButtonLabel.text = "Join now"
+        self.eventNameLabel.text = self.eventDetail?.data.first?.title
+        self.staticLabel.text = self.eventDetail?.data.first?.tag_line
+        self.eventDayLabel.text = formatDate(self.eventDetail?.data.first?.event_date ?? "")
+        self.eventTimeLabel.text = (formatTime(self.eventDetail?.data.first?.event_start_time ?? "") ?? "") + " - " + (formatTime(self.eventDetail?.data.first?.event_end_time ?? "") ?? "")
     }
 }
 
@@ -120,7 +144,7 @@ extension HomeViewController:  UICollectionViewDataSource, UICollectionViewDeleg
 
 //MARK: Article Cell
 class ArticleCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var articleImageWidth: NSLayoutConstraint!
     @IBOutlet weak var articleImageView: UIImageView!
     @IBOutlet weak var ArticleTitleLabel: UILabel!

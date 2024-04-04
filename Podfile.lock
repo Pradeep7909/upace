@@ -110,6 +110,11 @@ PODS:
   - nanopb/decode (2.30910.0)
   - nanopb/encode (2.30910.0)
   - PromisesObjC (2.4.0)
+  - Realm (10.49.1):
+    - Realm/Headers (= 10.49.1)
+  - Realm/Headers (10.49.1)
+  - RealmSwift (10.49.1):
+    - Realm (= 10.49.1)
   - RecaptchaInterop (100.0.0)
   - SDWebImage (5.19.0):
     - SDWebImage/Core (= 5.19.0)
@@ -124,6 +129,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/RemoteConfig
   - Firebase/Storage
+  - RealmSwift
   - SDWebImage
 
 SPEC REPOS:
@@ -152,6 +158,8 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - Realm
+    - RealmSwift
     - RecaptchaInterop
     - SDWebImage
 
@@ -180,9 +188,11 @@ SPEC CHECKSUMS:
   leveldb-library: 06a69cc7582d64b29424a63e085e683cc188230a
   nanopb: 438bc412db1928dac798aa6fd75726007be04262
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  Realm: 1fab4a224fd7a294eca142a0efe8b54546290fbf
+  RealmSwift: 7c3a9c001161eb01b96b171ad965a9c498b962b0
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   SDWebImage: 981fd7e860af070920f249fd092420006014c3eb
 
-PODFILE CHECKSUM: 51271be1f921f4dc1b5359b430ec57c395b4d54a
+PODFILE CHECKSUM: 1db55fc1ef07418fae965207e3391410c0c804f1
 
 COCOAPODS: 1.15.0

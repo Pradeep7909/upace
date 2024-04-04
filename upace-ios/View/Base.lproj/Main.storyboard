@@ -1359,7 +1359,7 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" name="K_DARK_GREY"/>
+                                        <color key="value" name="BORDER_COLOR"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="1"/>
@@ -1456,25 +1456,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSf-Z2-pid" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="822.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="785.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rzh-xC-Nb0">
-                                                <rect key="frame" x="16" y="20" width="288" height="211.5"/>
+                                                <rect key="frame" x="16" y="20" width="288" height="184"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌟🎓Hosted BY Study Metro🎓🌟" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzz-d3-DJS">
-                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="22"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="19"/>
                                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌟🎓Unlock Your Educational Dreams Best International Educational Fair! 🎓🌟 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tnu-Ph-Enn">
-                                                        <rect key="frame" x="0.0" y="32" width="288" height="131"/>
+                                                        <rect key="frame" x="0.0" y="29" width="288" height="112"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="24"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚀Get ready to embark on a thrilling  educational journey like never before!🚀" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el7-D2-I8m">
-                                                        <rect key="frame" x="0.0" y="173" width="288" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="151" width="288" height="33"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1482,28 +1482,28 @@
                                                 </subviews>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8HN-yf-sLt" customClass="CustomView" customModule="upace_ios" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="251.5" width="288" height="186"/>
+                                                <rect key="frame" x="16" y="224" width="288" height="176.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stay Connected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nh-VB-v9E">
-                                                        <rect key="frame" x="0.0" y="10" width="288" height="27.5"/>
+                                                        <rect key="frame" x="0.0" y="10" width="288" height="23.5"/>
                                                         <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2gZ-cH-wwo">
-                                                        <rect key="frame" x="0.0" y="42.5" width="288" height="133.5"/>
+                                                        <rect key="frame" x="0.0" y="38.5" width="288" height="128"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="As we bring universities together to coordinate a collective event." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdI-47-DYu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="38.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="288" height="33"/>
                                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oYz-dU-nXq">
-                                                                <rect key="frame" x="0.0" y="43.5" width="288" height="20"/>
+                                                                <rect key="frame" x="0.0" y="38" width="288" height="20"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KV-wQ-7vL">
-                                                                        <rect key="frame" x="92.5" y="0.0" width="103.5" height="20"/>
+                                                                        <rect key="frame" x="93" y="0.0" width="102.5" height="20"/>
                                                                         <subviews>
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monitor" translatesAutoresizingMaskIntoConstraints="NO" id="KPt-Py-v1W">
                                                                                 <rect key="frame" x="5" y="0.0" width="20" height="20"/>
@@ -1514,7 +1514,7 @@
                                                                                 </constraints>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online Fair" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTX-tT-XTh">
-                                                                                <rect key="frame" x="30" y="0.5" width="68.5" height="19.5"/>
+                                                                                <rect key="frame" x="30" y="2" width="67.5" height="16.5"/>
                                                                                 <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="14"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1539,7 +1539,7 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JI4-Qd-72o">
-                                                                <rect key="frame" x="0.0" y="68.5" width="288" height="20"/>
+                                                                <rect key="frame" x="0.0" y="63" width="288" height="20"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PLW-ap-dk4">
                                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="20"/>
@@ -1556,7 +1556,7 @@
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="March 08, 2024" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rii-sS-Vet">
-                                                                                        <rect key="frame" x="25" y="2" width="111.5" height="16.5"/>
+                                                                                        <rect key="frame" x="25" y="3" width="111.5" height="14"/>
                                                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1583,7 +1583,7 @@
                                                                                         </constraints>
                                                                                     </imageView>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00AM - 11:50PM" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-gO-1LQ">
-                                                                                        <rect key="frame" x="25" y="2" width="111.5" height="16.5"/>
+                                                                                        <rect key="frame" x="25" y="3" width="111.5" height="14"/>
                                                                                         <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="12"/>
                                                                                         <nil key="textColor"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1610,13 +1610,13 @@
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYJ-yT-nTM" userLabel="ButtonView">
-                                                                <rect key="frame" x="0.0" y="93.5" width="288" height="40"/>
+                                                                <rect key="frame" x="0.0" y="88" width="288" height="40"/>
                                                                 <subviews>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LPa-Qa-1VB" customClass="CustomView" customModule="upace_ios" customModuleProvider="target">
                                                                         <rect key="frame" x="69" y="0.0" width="150" height="40"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscribe now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw5-qk-xkY">
-                                                                                <rect key="frame" x="28" y="10.5" width="94.5" height="19.5"/>
+                                                                                <rect key="frame" x="28" y="12" width="94" height="16.5"/>
                                                                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -1691,28 +1691,28 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFa-m8-VrJ" userLabel="Recent Articles View">
-                                                <rect key="frame" x="16" y="457.5" width="288" height="315"/>
+                                                <rect key="frame" x="16" y="420.5" width="288" height="315"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNG-tA-2Va" userLabel="label View">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Articles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ7-9C-Lhu">
-                                                                <rect key="frame" x="0.0" y="7.5" width="128" height="25"/>
+                                                                <rect key="frame" x="0.0" y="9.5" width="122" height="21"/>
                                                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="18"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwP-v5-D0h">
-                                                                <rect key="frame" x="207.5" y="0.0" width="80.5" height="40"/>
+                                                                <rect key="frame" x="214" y="0.0" width="74" height="40"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjz-G5-cer">
-                                                                        <rect key="frame" x="0.0" y="9" width="60.5" height="22"/>
+                                                                        <rect key="frame" x="0.0" y="10.5" width="54" height="19"/>
                                                                         <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
                                                                         <color key="textColor" name="K_BLUE"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nj5-fA-KIB">
-                                                                        <rect key="frame" x="60.5" y="12" width="20" height="16.5"/>
+                                                                        <rect key="frame" x="54" y="12" width="20" height="16.5"/>
                                                                         <color key="tintColor" name="K_BLUE"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" secondItem="Nj5-fA-KIB" secondAttribute="height" multiplier="1:1" id="Fbs-qp-ffu"/>
@@ -1721,7 +1721,7 @@
                                                                         <imageReference key="image" image="chevron.right" catalog="system" symbolScale="medium"/>
                                                                     </imageView>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4g-yE-VxZ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="40"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="40"/>
                                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="  "/>
@@ -1784,14 +1784,14 @@
                                                                                 </userDefinedRuntimeAttribute>
                                                                             </userDefinedRuntimeAttributes>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Can you get into Universities without GRE/GMAT?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYi-I1-JUb">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you get into Universities without GRE/GMAT?" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JYi-I1-JUb">
                                                                             <rect key="frame" x="10" y="213.5" width="261" height="37.5"/>
                                                                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Updated Fec 12, 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvD-az-0Zs">
-                                                                            <rect key="frame" x="10" y="251" width="121" height="14"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated Fec 12, 2024" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvD-az-0Zs">
+                                                                            <rect key="frame" x="10" y="251" width="120" height="14"/>
                                                                             <fontDescription key="fontDescription" name="Nunito-Medium" family="Nunito" pointSize="12"/>
                                                                             <color key="textColor" name="K_DARK_GREY"/>
                                                                             <nil key="highlightedColor"/>
@@ -2858,14 +2858,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="BoothCell" id="15t-Tu-bu9" customClass="BoothCell" customModule="upace_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="338.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="333"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="15t-Tu-bu9" id="qlz-l5-y5h">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="338.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="333"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9w-9a-dIN" customClass="CustomView" customModule="upace_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="10" width="288" height="318.5"/>
+                                                    <rect key="frame" x="16" y="10" width="288" height="313"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="booth" translatesAutoresizingMaskIntoConstraints="NO" id="P20-gA-3TB" customClass="CustomImage" customModule="upace_ios" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="288" height="115"/>
@@ -2879,7 +2879,7 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UvJ-qa-QiT">
-                                                            <rect key="frame" x="0.0" y="115" width="288" height="203.5"/>
+                                                            <rect key="frame" x="0.0" y="115" width="288" height="198"/>
                                                             <subviews>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boothLogo" translatesAutoresizingMaskIntoConstraints="NO" id="sr3-3n-dai" customClass="CustomImage" customModule="upace_ios" customModuleProvider="target">
                                                                     <rect key="frame" x="10" y="-30" width="60" height="60"/>
@@ -2898,25 +2898,25 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Booth Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3rk-m0-ZTj">
-                                                                    <rect key="frame" x="10" y="30" width="268" height="22"/>
+                                                                    <rect key="frame" x="10" y="30" width="268" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="city" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxT-SB-uuQ">
-                                                                    <rect key="frame" x="10" y="52" width="268" height="16.5"/>
+                                                                    <rect key="frame" x="10" y="49" width="268" height="14"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="12"/>
                                                                     <color key="textColor" name="K_DARK_GREY"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5oK-GV-M98">
-                                                                    <rect key="frame" x="10" y="73.5" width="268" height="120"/>
+                                                                    <rect key="frame" x="10" y="68" width="268" height="120"/>
                                                                     <subviews>
                                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbf-yb-Qqn" customClass="CustomView" customModule="upace_ios" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="268" height="40"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Join Now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-N9-Zgs">
-                                                                                    <rect key="frame" x="105" y="10.5" width="58" height="19.5"/>
+                                                                                    <rect key="frame" x="104.5" y="12" width="59" height="16.5"/>
                                                                                     <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
@@ -2951,16 +2951,16 @@
                                                                             <rect key="frame" x="0.0" y="40" width="268" height="40"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your position in the queue." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjt-xs-yF1">
-                                                                                    <rect key="frame" x="0.0" y="10.5" width="169.5" height="19.5"/>
+                                                                                    <rect key="frame" x="0.0" y="12" width="167" height="16.5"/>
                                                                                     <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="14"/>
                                                                                     <color key="textColor" name="K_DARK_GREY"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryn-0w-kWS" customClass="CustomView" customModule="upace_ios" customModuleProvider="target">
-                                                                                    <rect key="frame" x="174.5" y="5" width="30" height="30"/>
+                                                                                    <rect key="frame" x="172" y="5" width="30" height="30"/>
                                                                                     <subviews>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qd-Qf-KGB">
-                                                                                            <rect key="frame" x="9" y="1.5" width="12" height="27.5"/>
+                                                                                            <rect key="frame" x="9.5" y="3.5" width="11.5" height="23.5"/>
                                                                                             <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                                                                             <color key="textColor" name="K_LIGHTEST_GREY"/>
                                                                                             <nil key="highlightedColor"/>
@@ -3074,6 +3074,12 @@
                                                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                             <size key="value" width="0.0" height="0.0"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="BORDER_COLOR"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
@@ -3103,7 +3109,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Booth Found!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-1m-zUN">
-                                <rect key="frame" x="20" y="70" width="280" height="27.5"/>
+                                <rect key="frame" x="20" y="70" width="280" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Nunito-Bold" family="Nunito" pointSize="20"/>
                                 <color key="textColor" name="K_DARK_GREY"/>
                                 <nil key="highlightedColor"/>
@@ -3331,33 +3337,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequently Asked Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgX-1k-Qk8">
-                                <rect key="frame" x="16" y="30" width="288" height="25"/>
+                                <rect key="frame" x="16" y="30" width="288" height="21"/>
                                 <fontDescription key="fontDescription" name="Nunito-SemiBold" family="Nunito" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="znc-Xo-anS">
-                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <rect key="frame" x="0.0" y="61" width="320" height="507"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FAQCell" id="XQa-yQ-t5V" customClass="FAQCell" customModule="upace_ios" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="171.5"/>
+                                        <rect key="frame" x="0.0" y="50" width="320" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XQa-yQ-t5V" id="lXM-1j-G9c">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="171.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oe-7V-LQf" customClass="CustomView" customModule="upace_ios" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="5" width="288" height="161.5"/>
+                                                    <rect key="frame" x="16" y="5" width="288" height="149"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V7w-Qv-cVH">
-                                                            <rect key="frame" x="10" y="5" width="268" height="151.5"/>
+                                                            <rect key="frame" x="10" y="5" width="268" height="139"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTr-ct-C6S">
                                                                     <rect key="frame" x="0.0" y="0.0" width="268" height="64"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Which universities are participating?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDI-PE-JOc">
-                                                                            <rect key="frame" x="0.0" y="10" width="238" height="44"/>
+                                                                            <rect key="frame" x="0.0" y="10" width="238" height="37.5"/>
                                                                             <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
@@ -3391,7 +3397,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVX-sQ-5XP">
-                                                                    <rect key="frame" x="0.0" y="64" width="268" height="87.5"/>
+                                                                    <rect key="frame" x="0.0" y="64" width="268" height="75"/>
                                                                     <string key="text">A wide range of universities from around the world will be present, offering diverse academic programs and insights into their campuses.</string>
                                                                     <fontDescription key="fontDescription" name="Nunito-Regular" family="Nunito" pointSize="16"/>
                                                                     <color key="textColor" name="K_DARK_GREY"/>
@@ -3422,6 +3428,12 @@
                                                         </userDefinedRuntimeAttribute>
                                                         <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                                             <size key="value" width="0.0" height="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" name="BORDER_COLOR"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>

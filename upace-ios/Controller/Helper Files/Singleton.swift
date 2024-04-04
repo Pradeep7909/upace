@@ -35,7 +35,6 @@ class Singleton {
     }
     var selectedEvent : Event?
     var currentJoinMeeting : MeetingJoinResponse?
-    var savedBoothList : BoothResponse?
     var selectedLanguage : String?
     
     private let userDefaults = UserDefaults.standard

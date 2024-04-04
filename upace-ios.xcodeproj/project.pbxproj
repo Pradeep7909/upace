@@ -28,7 +28,9 @@
 		AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */; };
 		AEB7231B2B9C2C440008A80C /* CustomTextfieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */; };
 		AEC2D0512B98F67600B2CEA0 /* ToastManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */; };
+		AED71A482BBE89B4003EDC2D /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED71A472BBE89B4003EDC2D /* RealmManager.swift */; };
 		AEDA83E22BBD216900A9E75D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEDA83E42BBD216900A9E75D /* Localizable.strings */; };
+		AEDA83EE2BBD7F2B00A9E75D /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDA83ED2BBD7F2B00A9E75D /* RealmModel.swift */; };
 		AEDCB4602BA1D7B2007E0EA0 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */; };
 		AEE5241C2B999E31007B0D37 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241B2B999E31007B0D37 /* SessionManager.swift */; };
 		AEE5241E2B999EC5007B0D37 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE5241D2B999EC5007B0D37 /* Model.swift */; };
@@ -88,10 +90,12 @@
 		AEB723182B9C2C270008A80C /* CustomTextfieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfieldView.swift; sourceTree = "<group>"; };
 		AEB7231A2B9C2C440008A80C /* CustomTextfieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextfieldView.xib; sourceTree = "<group>"; };
 		AEC2D0502B98F67600B2CEA0 /* ToastManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManager.swift; sourceTree = "<group>"; };
+		AED71A472BBE89B4003EDC2D /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		AEDA83E32BBD216900A9E75D /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AEDA83E82BBD275000A9E75D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AEDA83EB2BBD317500A9E75D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		AEDA83EC2BBD318200A9E75D /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
+		AEDA83ED2BBD7F2B00A9E75D /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		AEDCB45F2BA1D7B2007E0EA0 /* MeetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
 		AEE5241B2B999E31007B0D37 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		AEE5241D2B999EC5007B0D37 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -255,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				AEE5241D2B999EC5007B0D37 /* Model.swift */,
+				AEDA83ED2BBD7F2B00A9E75D /* RealmModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				AEE5241F2B999F23007B0D37 /* ActivityIndicator.swift */,
 				AEE524212B99C013007B0D37 /* Singleton.swift */,
 				AEA175772BB480FD0076F225 /* FirebaseManager.swift */,
+				AED71A472BBE89B4003EDC2D /* RealmManager.swift */,
 			);
 			path = "Helper Files";
 			sourceTree = "<group>";
@@ -470,8 +476,10 @@
 				AEB723192B9C2C270008A80C /* CustomTextfieldView.swift in Sources */,
 				AEE869072B98526D00549A94 /* AppDelegate.swift in Sources */,
 				AE5636B52B9F10B6001454C4 /* EventPageViewController.swift in Sources */,
+				AED71A482BBE89B4003EDC2D /* RealmManager.swift in Sources */,
 				AEE8692D2B989AA000549A94 /* CommonTopView.swift in Sources */,
 				AEE869092B98526D00549A94 /* SceneDelegate.swift in Sources */,
+				AEDA83EE2BBD7F2B00A9E75D /* RealmModel.swift in Sources */,
 				AE5636B82B9F11BD001454C4 /* BoothListViewController.swift in Sources */,
 				AEE524222B99C013007B0D37 /* Singleton.swift in Sources */,
 				AE68A9522B9A2B8D00AF97C4 /* ProfileViewController.swift in Sources */,

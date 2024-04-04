@@ -18,4 +18,6 @@ target 'upace-ios' do
     pod 'Firebase/Database'
     pod 'Firebase/Storage'
     
+    pod 'RealmSwift'
+    
 end

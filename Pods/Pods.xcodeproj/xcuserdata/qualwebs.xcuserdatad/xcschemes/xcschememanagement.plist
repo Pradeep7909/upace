@@ -256,26 +256,54 @@
 			<key>orderHint</key>
 			<integer>38</integer>
 		</dict>
-		<key>RecaptchaInterop.xcscheme</key>
+		<key>Realm-realm_objc_privacy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>41</integer>
+		</dict>
+		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>40</integer>
 		</dict>
-		<key>SDWebImage-SDWebImage.xcscheme</key>
+		<key>RealmSwift-realm_swift_privacy.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>43</integer>
+		</dict>
+		<key>RealmSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>42</integer>
 		</dict>
+		<key>RecaptchaInterop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>44</integer>
+		</dict>
+		<key>SDWebImage-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>46</integer>
+		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>45</integer>
 		</dict>
 		<key>leveldb-library-leveldb_Privacy.xcscheme</key>
 		<dict>
